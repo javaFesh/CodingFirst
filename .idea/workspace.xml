@@ -7,75 +7,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48520183-1900-45b5-86a0-37564fbe3817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TAcborderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TChapterMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TClockInMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TCollectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TCourseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TDiscussMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TDiscussreplyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TMallMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TNoteMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TProblemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TProblemTagMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TReplyreplyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TRouteMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TTeacherMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TUsersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TAcborder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TAcborderExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TChapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TChapterExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TClockIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TClockInExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCollect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCollectExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCourseExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscuss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscussExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscussreply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscussreplyExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscussreplyKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TMall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TMallExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TNote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TNoteExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblemExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblemTag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblemTagExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TReplyreply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TReplyreplyExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TReplyreplyKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TRoute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TRouteExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TTeacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TTeacherExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TUsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TUsersExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/test/PhoneCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/test/StaticPeram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TAcborderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TChapterMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TClockInMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TCollectMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TCourseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TDiscussMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TDiscussreplyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TMallMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TNoteMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TProblemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TProblemTagMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TReplyreplyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TRouteMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TTeacherMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TUsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingFirstService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingFirstWeb/target/classes/com/fjut/oj/edu/controller/DemoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingFirstWeb/target/classes/controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TAcborderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/AcborderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TChapterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ChapterDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TClockInMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ClockInDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TCollectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/CollectDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TCourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TDiscussMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/DiscussDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TDiscussreplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/DiscussreplyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TMallMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/MallDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TNoteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/NoteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TProblemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ProblemDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TProblemTagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ProblemTagDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TReplyreplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ReplyreplyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TRouteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/RouteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TTeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TeacherDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TUsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/UsersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TAcborder.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Acborder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TAcborderExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TChapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Chapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TChapterExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TClockIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/ClockIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TClockInExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCollect.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Collect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCollectExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCourseExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscuss.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Discuss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscussExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscussreply.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Discussreply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscussreplyExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TDiscussreplyKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TMall.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Mall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TMallExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TNote.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TNoteExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Problem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblemExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblemTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/ProblemTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblemTagExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TReplyreply.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Replyreply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TReplyreplyExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TReplyreplyKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TRouteExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TTeacherExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TUsers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TUsersExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TAcborderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TChapterMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TClockInMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TCollectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TCourseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TDiscussMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TDiscussreplyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TMallMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TNoteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TProblemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TProblemTagMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TReplyreplyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TRouteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TTeacherMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TUsersMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/src/test/java/com/fjut/edu/oj/test/dao/DemoDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/src/test/java/com/fjut/edu/oj/test/dao/DemoDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstService/target/test-classes/com/fjut/edu/oj/test/dao/DemoDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstService/target/test-classes/com/fjut/edu/oj/test/dao/DemoDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingFirstWeb/target/CodingFirstWeb/WEB-INF/lib/CodingFirstService-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/CodingFirstWeb/target/CodingFirstWeb/WEB-INF/lib/CodingFirstService-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/CodingFirstWeb/target/" />
@@ -89,19 +89,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/DemoMapper.xml">
+        <entry file="file://$PROJECT_DIR$/CodingFirstService/src/test/java/com/fjut/edu/oj/test/dao/DemoDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="39" />
+            <state relative-caret-position="199">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TCourseMapper.java">
+        <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/UsersDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="170">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,17 +113,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TReplyreplyMapper.xml">
+        <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="263" column="44" lean-forward="true" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="44" />
+            <state relative-caret-position="119">
+              <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblemExample.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="534">
+              <caret line="48" column="43" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="42" selection-start-line="42" selection-end-line="44" selection-end-column="11" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -148,23 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/test/service/impl/DemoserviceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/test/com/fjut/oj/edu/test/BaseJunit4Test.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/DemoDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Demo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DemoMapper" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/DemoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/DemoserviceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/demo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DemoMapper.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/DemoController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fileupload.jsp" />
-        <option value="$PROJECT_DIR$/src/main/test/com/fjut/oj/edu/test/dao/DemoDaoTest.java" />
         <option value="$PROJECT_DIR$/CodingFirstWeb/pom.xml" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/edu/service/impl/DemoserviceImpl.java" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/impl/DemoserviceImpl.java" />
@@ -172,14 +171,10 @@
         <option value="$PROJECT_DIR$/CodingFirstService/src/test/java/com/fjut/edu/oj/test/BaseJunit4Test.java" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/DemoDao.java" />
         <option value="$PROJECT_DIR$/CodingFirstWeb/src/main/java/com/fjut/oj/edu/controller/DemoController.java" />
-        <option value="$PROJECT_DIR$/CodingFirstService/src/test/java/com/fjut/edu/oj/test/dao/DemoDaoTest.java" />
-        <option value="$PROJECT_DIR$/CodingFirstWeb/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/User.java" />
         <option value="$PROJECT_DIR$/CodingFirstService/pom.xml" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/test/StaticPeram.java" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/test/PhoneCode.java" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCollectExample.java" />
-        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TAcborderMapper.java" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TChapterMapper.java" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TClockInMapper.java" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TCollectMapper.java" />
@@ -196,6 +191,30 @@
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TUsersMapper.java" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TTeacherMapper.xml" />
         <option value="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TAcborderMapper.xml" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/TUsers.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Users.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/User.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TAcborderMapper.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/AcborderDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ChapterDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ClockInDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/CollectDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/CourseDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/DiscussDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/DiscussreplyDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/MallDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/NoteDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ProblemDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ProblemTagDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ReplyreplyDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/RouteDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TeacherDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Discussreply.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Replyreply.java" />
+        <option value="$PROJECT_DIR$/CodingFirstWeb/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/UsersDao.java" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/CodingFirstService/src/test/java/com/fjut/edu/oj/test/dao/DemoDaoTest.java" />
       </list>
     </option>
   </component>
@@ -221,7 +240,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
+    <option name="x" value="595" />
+    <option name="y" value="184" />
     <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
@@ -234,7 +254,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,7 +285,53 @@
               <item name="CodingFirstService" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodingFirst" type="462c0819:PsiDirectoryNode" />
+              <item name="CodingFirstService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodingFirst" type="462c0819:PsiDirectoryNode" />
+              <item name="CodingFirstService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodingFirst" type="462c0819:PsiDirectoryNode" />
+              <item name="CodingFirstService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodingFirst" type="462c0819:PsiDirectoryNode" />
+              <item name="CodingFirstService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodingFirst" type="462c0819:PsiDirectoryNode" />
+              <item name="CodingFirstService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
@@ -345,30 +410,29 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CodingFirst" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566261364740" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566283333831" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../框架/CodingFirst" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IDEAcode\CodingFirst\CodingFirst\CodingFirstService\src\main\resources\mapper" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.fjut.oj.edu.service.impl" />
       <recent name="com.fjut.oj.edu.service" />
@@ -377,11 +441,11 @@
       <recent name="com.fjut.oj.edu.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IDEAcode\CodingFirst\CodingFirst\CodingFirstService\src\main\resources" />
+      <recent name="E:\IDEAcode\CodingFirst\CodingFirst\CodingFirstService\src\main\resources\mapper" />
+      <recent name="E:\IDEAcode\CodingFirst\CodingFirst\CodingFirstService\src\main\java\com\fjut\oj\edu\dao" />
+      <recent name="E:\IDEAcode\CodingFirst\CodingFirst\CodingFirstService\src\main\java\com\fjut\oj\edu\model" />
       <recent name="E:\IDEAcode\CodingFirst\CodingFirstService\src\main\resources\mapper" />
-      <recent name="E:\IDEAcode\CodingFirst\CodingFirstService\src\main\java\com\fjut\oj\edu\pojo" />
-      <recent name="E:\IDEAcode\CodingFirst\CodingFirstService\src\main\java\com\fjut\oj\edu\dao" />
-      <recent name="E:\IDEAcode\CodingFirst\CodingFirstService\src\main\java\com\fjut\oj\edu\test" />
-      <recent name="E:\IDEAcode\CodingFirst\CodingFirstWeb\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -396,7 +460,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PhoneCode">
+  <component name="RunManager" selected="JUnit.DemoDaoTest.testUser">
     <configuration name="PhoneCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.fjut.oj.edu.test.PhoneCode" />
       <module name="CodingFirstService" />
@@ -406,6 +470,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in CodingFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodingFirstService" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -420,21 +492,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.fjut.edu.oj.test.dao" />
       <option name="MAIN_CLASS_NAME" value="com.fjut.edu.oj.test.dao.DemoDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DemoDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CodingFirst" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fjut.oj.edu.test.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.fjut.oj.edu.test.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.fjut.oj.edu.test.dao.DemoDaoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -456,17 +513,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoDaoTest.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CodingFirst" />
+    <configuration name="DemoDaoTest.testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodingFirstService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.fjut.oj.edu.test.dao.*" />
+          <option name="PATTERN" value="com.fjut.edu.oj.test.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.fjut.oj.edu.test.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.fjut.oj.edu.test.dao.DemoDaoTest" />
-      <option name="METHOD_NAME" value="testFindAll" />
+      <option name="PACKAGE_NAME" value="com.fjut.edu.oj.test.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.fjut.edu.oj.test.dao.DemoDaoTest" />
+      <option name="METHOD_NAME" value="testUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -548,19 +605,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.PhoneCode" />
-      <item itemvalue="JUnit.DemoDaoTest" />
-      <item itemvalue="JUnit.DemoDaoTest.testFindAll" />
       <item itemvalue="JUnit.DemoDaoTest.testFindAll (1)" />
       <item itemvalue="JUnit.DemoDaoTest (1)" />
+      <item itemvalue="JUnit.DemoDaoTest.testUser" />
+      <item itemvalue="JUnit.All in CodingFirst" />
       <item itemvalue="Tomcat Server.CFtomcat" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DemoDaoTest.testUser" />
+        <item itemvalue="JUnit.DemoDaoTest.testFindAll (1)" />
+        <item itemvalue="JUnit.All in CodingFirst" />
         <item itemvalue="Application.PhoneCode" />
         <item itemvalue="JUnit.DemoDaoTest (1)" />
-        <item itemvalue="JUnit.DemoDaoTest.testFindAll (1)" />
-        <item itemvalue="JUnit.DemoDaoTest" />
-        <item itemvalue="JUnit.DemoDaoTest.testFindAll" />
       </list>
     </recent_temporary>
   </component>
@@ -581,6 +638,9 @@
       <workItem from="1566173981154" duration="3456000" />
       <workItem from="1566180124225" duration="7423000" />
       <workItem from="1566259803606" duration="1460000" />
+      <workItem from="1566270960885" duration="409000" />
+      <workItem from="1566271596468" duration="4426000" />
+      <workItem from="1566282615189" duration="1321000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1565919476231</created>
@@ -614,33 +674,44 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DemoDaoTest - 2019.08.15 at 14h 49m 07s.xml">
-      <configuration name="DemoDaoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoDaoTest_testFindAll - 2019.08.15 at 14h 52m 55s.xml">
-      <configuration name="DemoDaoTest.testFindAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoDaoTest_testFindAll - 2019.08.15 at 14h 53m 14s.xml">
-      <configuration name="DemoDaoTest.testFindAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoDaoTest - 2019.08.16 at 09h 41m 38s.xml">
-      <configuration name="DemoDaoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoDaoTest_testFindAll_(1) - 2019.08.19 at 09h 01m 47s.xml">
+    <history-entry file="DemoDaoTest_testFindAll_(1) - 2019.08.20 at 14h 18m 26s.xml">
       <configuration name="DemoDaoTest.testFindAll (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DemoDaoTest_(1) - 2019.08.19 at 15h 14m 50s.xml">
-      <configuration name="DemoDaoTest (1)" configurationId="JUnit" />
+    <history-entry file="DemoDaoTest_testFindAll_(1) - 2019.08.20 at 14h 19m 12s.xml">
+      <configuration name="DemoDaoTest.testFindAll (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoDaoTest_testFindAll_(1) - 2019.08.20 at 14h 20m 12s.xml">
+      <configuration name="DemoDaoTest.testFindAll (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoDaoTest_testFindAll_(1) - 2019.08.20 at 14h 22m 27s.xml">
+      <configuration name="DemoDaoTest.testFindAll (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoDaoTest_testFindAll_(1) - 2019.08.20 at 14h 22m 41s.xml">
+      <configuration name="DemoDaoTest.testFindAll (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoDaoTest_testUser - 2019.08.20 at 14h 23m 07s.xml">
+      <configuration name="DemoDaoTest.testUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoDaoTest_testUser - 2019.08.20 at 14h 34m 23s.xml">
+      <configuration name="DemoDaoTest.testUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoDaoTest_testUser - 2019.08.20 at 14h 41m 08s.xml">
+      <configuration name="DemoDaoTest.testUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoDaoTest_testFindAll_(1) - 2019.08.20 at 14h 41m 29s.xml">
+      <configuration name="DemoDaoTest.testFindAll (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoDaoTest_testUser - 2019.08.20 at 14h 41m 44s.xml">
+      <configuration name="DemoDaoTest.testUser" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27057000" />
+    <option name="totallyTimeSpent" value="33213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15991472" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20788912" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -649,8 +720,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22552255" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34019503" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -697,40 +768,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="asjdhaklshdlaksdl" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/DemoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TAcborderMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblemExample.java" />
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TReplyreplyMapper.xml" />
     <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/webapp/WEB-INF/views/demo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-146" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/webapp/statics/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
+        <state relative-caret-position="374">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/java/com/fjut/oj/edu/controller/DemoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="-187">
           <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -738,292 +788,332 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Users.java" />
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TUsersMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ChapterDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/resources/spring-mvc.xml">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ClockInDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/resources/applicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/CollectDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/pom.xml">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/CourseDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/DiscussreplyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/MallDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/NoteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ProblemDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ProblemTagDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/ReplyreplyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/DiscussDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Acborder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Chapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/ClockIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Collect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Discuss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Mall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Problem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/ProblemTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Discussreply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding>
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Replyreply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/AcborderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        <state relative-caret-position="1377">
+          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/aliyun/aliyun-java-sdk-core/3.2.8/aliyun-java-sdk-core-3.2.8.jar!/com/aliyuncs/http/MethodType.class">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/DemoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        <state relative-caret-position="68">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/test/java/com/fjut/edu/oj/test/dao/DemoDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/RouteDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/test/StaticPeram.java">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TeacherDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/test/PhoneCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="79" column="52" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TCollectExample.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TAcborderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TChapterMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TClockInMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TCollectMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TDiscussMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TDiscussreplyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TMallMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TNoteMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TProblemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TProblemTagMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TReplyreplyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TRouteMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TTeacherMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TUsersMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TChapterMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TClockInMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TCollectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TCourseMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TDiscussreplyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TDiscussMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TMallMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TNoteMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TProblemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TProblemTagMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TRouteMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TTeacherMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="46" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TAcborderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/DemoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="39" />
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/pojo/TProblemExample.java">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/TCourseMapper.java">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/java/controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/test/java/com/fjut/edu/oj/test/BaseJunit4Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/TReplyreplyMapper.xml">
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="263" column="44" lean-forward="true" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="44" />
+        <state relative-caret-position="714">
+          <caret line="42" selection-start-line="42" selection-end-line="44" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstWeb/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/java/com/fjut/oj/edu/dao/UsersDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/test/java/com/fjut/edu/oj/test/dao/DemoDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodingFirstService/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>

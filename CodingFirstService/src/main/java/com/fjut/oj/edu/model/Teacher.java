@@ -2,10 +2,10 @@ package com.fjut.oj.edu.model;
 
 import java.util.Date;
 
-public class User {
-    private String userid;
+public class Teacher {
+    private String teacherid;
 
-    private String userpwd;
+    private String teacherpwd;
 
     private String nick;
 
@@ -19,30 +19,24 @@ public class User {
 
     private Date registertime;
 
-    private Long type;
-
-    private Long acb;
-
     private String name;
 
     private String phone;
 
-    private Long acnum;
-
-    public String getUserid() {
-        return userid;
+    public String getTeacherid() {
+        return teacherid;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid == null ? null : userid.trim();
+    public void setTeacherid(String teacherid) {
+        this.teacherid = teacherid == null ? null : teacherid.trim();
     }
 
-    public String getUserpwd() {
-        return userpwd;
+    public String getTeacherpwd() {
+        return teacherpwd;
     }
 
-    public void setUserpwd(String userpwd) {
-        this.userpwd = userpwd == null ? null : userpwd.trim();
+    public void setTeacherpwd(String teacherpwd) {
+        this.teacherpwd = teacherpwd == null ? null : teacherpwd.trim();
     }
 
     public String getNick() {
@@ -93,22 +87,6 @@ public class User {
         this.registertime = registertime;
     }
 
-    public Long getType() {
-        return type;
-    }
-
-    public void setType(Long type) {
-        this.type = type;
-    }
-
-    public Long getAcb() {
-        return acb;
-    }
-
-    public void setAcb(Long acb) {
-        this.acb = acb;
-    }
-
     public String getName() {
         return name;
     }
@@ -124,17 +102,4 @@ public class User {
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
     }
-
-    public Long getAcnum() {
-        return acnum;
-    }
-
-    public void setAcnum(Long acnum) {
-        this.acnum = acnum;
-    }
-
-
-
-
-
 }
