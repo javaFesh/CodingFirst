@@ -7,21 +7,18 @@
   <groupId>com.fjut.oj.edu</groupId>
   <artifactId>CodingFirst</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>CodingFirstWeb</module>
-      <module>CodingFirstService</module>
-  </modules>
-  <packaging>pom</packaging>
+  <packaging>war</packaging>
 
   <name>CodingFirst Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
-<!--这是一个悲伤的故事-->
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <!--spring-->
     <spring.version>5.0.4.RELEASE</spring.version>
+    <!--springMVC-->
     <javax.servlet.version>4.0.0</javax.servlet.version>
     <jstl.version>1.2</jstl.version>
     <!--mbatis-->
@@ -39,10 +36,6 @@
     <jedis.version>2.7.2</jedis.version>
     <commons.version>2.4.2</commons.version>
 
-<!--文件上传-->
-
-      <commons-fileupload.version>1.3.1</commons-fileupload.version>
-      <commons-io.version>2.4</commons-io.version>
 
 
 
@@ -50,28 +43,6 @@
 
   <dependencies>
 
-
-    <!--文件start-->
-      <dependency>
-        <groupId>commons-io</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>${commons-io.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>commons-fileupload</groupId>
-        <artifactId>commons-fileupload</artifactId>
-        <version>${commons-fileupload.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-
-
-    <!--文件end-->
 
     <!--log4j start -->
     <dependency>
@@ -236,7 +207,7 @@
 
 
     <!--jsjson Start-->
-<!--hwj-->
+
 
     <dependency>
       <groupId>com.google.code.gson</groupId>
