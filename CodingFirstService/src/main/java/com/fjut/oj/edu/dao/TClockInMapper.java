@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TClockIn;
 import com.fjut.oj.edu.pojo.TClockInExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TClockInMapper {
     int countByExample(TClockInExample example);
 

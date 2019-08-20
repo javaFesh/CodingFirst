@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TTeacher;
 import com.fjut.oj.edu.pojo.TTeacherExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TTeacherMapper {
     int countByExample(TTeacherExample example);
 

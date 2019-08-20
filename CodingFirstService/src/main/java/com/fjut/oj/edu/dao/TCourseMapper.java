@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TCourse;
 import com.fjut.oj.edu.pojo.TCourseExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TCourseMapper {
     int countByExample(TCourseExample example);
 

@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TRoute;
 import com.fjut.oj.edu.pojo.TRouteExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TRouteMapper {
     int countByExample(TRouteExample example);
 

@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TCollect;
 import com.fjut.oj.edu.pojo.TCollectExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TCollectMapper {
     int countByExample(TCollectExample example);
 

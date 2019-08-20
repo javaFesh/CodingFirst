@@ -5,7 +5,9 @@ import com.fjut.oj.edu.pojo.TReplyreplyExample;
 import com.fjut.oj.edu.pojo.TReplyreplyKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TReplyreplyMapper {
     int countByExample(TReplyreplyExample example);
 

@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TMall;
 import com.fjut.oj.edu.pojo.TMallExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TMallMapper {
     int countByExample(TMallExample example);
 

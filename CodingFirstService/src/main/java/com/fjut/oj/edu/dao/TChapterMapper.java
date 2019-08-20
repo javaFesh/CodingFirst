@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TChapter;
 import com.fjut.oj.edu.pojo.TChapterExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TChapterMapper {
     int countByExample(TChapterExample example);
 

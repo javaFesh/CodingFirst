@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TUsers;
 import com.fjut.oj.edu.pojo.TUsersExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TUsersMapper {
     int countByExample(TUsersExample example);
 

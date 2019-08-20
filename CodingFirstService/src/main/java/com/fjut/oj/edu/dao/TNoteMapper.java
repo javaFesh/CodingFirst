@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TNote;
 import com.fjut.oj.edu.pojo.TNoteExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TNoteMapper {
     int countByExample(TNoteExample example);
 

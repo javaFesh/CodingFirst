@@ -4,7 +4,9 @@ import com.fjut.oj.edu.pojo.TProblemTag;
 import com.fjut.oj.edu.pojo.TProblemTagExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TProblemTagMapper {
     int countByExample(TProblemTagExample example);
 
