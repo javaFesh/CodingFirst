@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fjut.oj.edu.dao.TDiscussreplyMapper" >
+  <resultMap id="BaseResultMap" type="com.fjut.oj.edu.pojo.TDiscussreply" >
+    <id column="replyId" property="replyid" jdbcType="BIGINT" />
+    <id column="discussId" property="discussid" jdbcType="BIGINT" />
+    <result column="replyTime" property="replytime" jdbcType="TIMESTAMP" />
+    <result column="replyAuthor" property="replyauthor" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.fjut.oj.edu.pojo.TDiscussreply" extends="BaseResultMap" >
+    <result column="replyText" property="replytext" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    replyId, discussId, replyTime, replyAuthor
+  </sql>
+  <sql id="Blob_Column_List" >
+    replyText
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.fjut.oj.edu.pojo.TDiscussreplyExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_discussreply
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fjut.oj.edu.pojo.TDiscussreplyExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_discussreply
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="com.fjut.oj.edu.pojo.TDiscussreplyKey" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_discussreply
+    where replyId = #{replyid,jdbcType=BIGINT}
+      and discussId = #{discussid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.fjut.oj.edu.pojo.TDiscussreplyKey" >
+    delete from t_discussreply
+    where replyId = #{replyid,jdbcType=BIGINT}
+      and discussId = #{discussid,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.fjut.oj.edu.pojo.TDiscussreplyExample" >
+    delete from t_discussreply
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.fjut.oj.edu.pojo.TDiscussreply" >
+    insert into t_discussreply (replyId, discussId, replyTime, 
+      replyAuthor, replyText)
+    values (#{replyid,jdbcType=BIGINT}, #{discussid,jdbcType=BIGINT}, #{replytime,jdbcType=TIMESTAMP}, 
+      #{replyauthor,jdbcType=VARCHAR}, #{replytext,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fjut.oj.edu.pojo.TDiscussreply" >
+    insert into t_discussreply
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="replyid != null" >
+        replyId,
+      </if>
+      <if test="discussid != null" >
+        discussId,
+      </if>
+      <if test="replytime != null" >
+        replyTime,
+      </if>
+      <if test="replyauthor != null" >
+        replyAuthor,
+      </if>
+      <if test="replytext != null" >
+        replyText,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="replyid != null" >
+        #{replyid,jdbcType=BIGINT},
+      </if>
+      <if test="discussid != null" >
+        #{discussid,jdbcType=BIGINT},
+      </if>
+      <if test="replytime != null" >
+        #{replytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="replyauthor != null" >
+        #{replyauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="replytext != null" >
+        #{replytext,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.fjut.oj.edu.pojo.TDiscussreplyExample" resultType="java.lang.Integer" >
+    select count(*) from t_discussreply
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_discussreply
+    <set >
+      <if test="record.replyid != null" >
+        replyId = #{record.replyid,jdbcType=BIGINT},
+      </if>
+      <if test="record.discussid != null" >
+        discussId = #{record.discussid,jdbcType=BIGINT},
+      </if>
+      <if test="record.replytime != null" >
+        replyTime = #{record.replytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.replyauthor != null" >
+        replyAuthor = #{record.replyauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.replytext != null" >
+        replyText = #{record.replytext,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update t_discussreply
+    set replyId = #{record.replyid,jdbcType=BIGINT},
+      discussId = #{record.discussid,jdbcType=BIGINT},
+      replyTime = #{record.replytime,jdbcType=TIMESTAMP},
+      replyAuthor = #{record.replyauthor,jdbcType=VARCHAR},
+      replyText = #{record.replytext,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_discussreply
+    set replyId = #{record.replyid,jdbcType=BIGINT},
+      discussId = #{record.discussid,jdbcType=BIGINT},
+      replyTime = #{record.replytime,jdbcType=TIMESTAMP},
+      replyAuthor = #{record.replyauthor,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fjut.oj.edu.pojo.TDiscussreply" >
+    update t_discussreply
+    <set >
+      <if test="replytime != null" >
+        replyTime = #{replytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="replyauthor != null" >
+        replyAuthor = #{replyauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="replytext != null" >
+        replyText = #{replytext,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where replyId = #{replyid,jdbcType=BIGINT}
+      and discussId = #{discussid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.fjut.oj.edu.pojo.TDiscussreply" >
+    update t_discussreply
+    set replyTime = #{replytime,jdbcType=TIMESTAMP},
+      replyAuthor = #{replyauthor,jdbcType=VARCHAR},
+      replyText = #{replytext,jdbcType=LONGVARCHAR}
+    where replyId = #{replyid,jdbcType=BIGINT}
+      and discussId = #{discussid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fjut.oj.edu.pojo.TDiscussreply" >
+    update t_discussreply
+    set replyTime = #{replytime,jdbcType=TIMESTAMP},
+      replyAuthor = #{replyauthor,jdbcType=VARCHAR}
+    where replyId = #{replyid,jdbcType=BIGINT}
+      and discussId = #{discussid,jdbcType=BIGINT}
+  </update>
+</mapper>

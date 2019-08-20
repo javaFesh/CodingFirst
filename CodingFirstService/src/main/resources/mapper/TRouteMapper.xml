@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fjut.oj.edu.dao.TRouteMapper" >
+  <resultMap id="BaseResultMap" type="com.fjut.oj.edu.pojo.TRoute" >
+    <id column="RouteOuteid" property="routeouteid" jdbcType="BIGINT" />
+    <result column="courseId" property="courseid" jdbcType="BIGINT" />
+    <result column="problemId" property="problemid" jdbcType="BIGINT" />
+    <result column="lname" property="lname" jdbcType="VARCHAR" />
+    <result column="lbigintroductions" property="lbigintroductions" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    RouteOuteid, courseId, problemId, lname, lbigintroductions
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.fjut.oj.edu.pojo.TRouteExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_route
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_route
+    where RouteOuteid = #{routeouteid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_route
+    where RouteOuteid = #{routeouteid,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.fjut.oj.edu.pojo.TRouteExample" >
+    delete from t_route
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.fjut.oj.edu.pojo.TRoute" >
+    insert into t_route (RouteOuteid, courseId, problemId, 
+      lname, lbigintroductions)
+    values (#{routeouteid,jdbcType=BIGINT}, #{courseid,jdbcType=BIGINT}, #{problemid,jdbcType=BIGINT}, 
+      #{lname,jdbcType=VARCHAR}, #{lbigintroductions,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fjut.oj.edu.pojo.TRoute" >
+    insert into t_route
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="routeouteid != null" >
+        RouteOuteid,
+      </if>
+      <if test="courseid != null" >
+        courseId,
+      </if>
+      <if test="problemid != null" >
+        problemId,
+      </if>
+      <if test="lname != null" >
+        lname,
+      </if>
+      <if test="lbigintroductions != null" >
+        lbigintroductions,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="routeouteid != null" >
+        #{routeouteid,jdbcType=BIGINT},
+      </if>
+      <if test="courseid != null" >
+        #{courseid,jdbcType=BIGINT},
+      </if>
+      <if test="problemid != null" >
+        #{problemid,jdbcType=BIGINT},
+      </if>
+      <if test="lname != null" >
+        #{lname,jdbcType=VARCHAR},
+      </if>
+      <if test="lbigintroductions != null" >
+        #{lbigintroductions,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.fjut.oj.edu.pojo.TRouteExample" resultType="java.lang.Integer" >
+    select count(*) from t_route
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_route
+    <set >
+      <if test="record.routeouteid != null" >
+        RouteOuteid = #{record.routeouteid,jdbcType=BIGINT},
+      </if>
+      <if test="record.courseid != null" >
+        courseId = #{record.courseid,jdbcType=BIGINT},
+      </if>
+      <if test="record.problemid != null" >
+        problemId = #{record.problemid,jdbcType=BIGINT},
+      </if>
+      <if test="record.lname != null" >
+        lname = #{record.lname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lbigintroductions != null" >
+        lbigintroductions = #{record.lbigintroductions,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_route
+    set RouteOuteid = #{record.routeouteid,jdbcType=BIGINT},
+      courseId = #{record.courseid,jdbcType=BIGINT},
+      problemId = #{record.problemid,jdbcType=BIGINT},
+      lname = #{record.lname,jdbcType=VARCHAR},
+      lbigintroductions = #{record.lbigintroductions,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fjut.oj.edu.pojo.TRoute" >
+    update t_route
+    <set >
+      <if test="courseid != null" >
+        courseId = #{courseid,jdbcType=BIGINT},
+      </if>
+      <if test="problemid != null" >
+        problemId = #{problemid,jdbcType=BIGINT},
+      </if>
+      <if test="lname != null" >
+        lname = #{lname,jdbcType=VARCHAR},
+      </if>
+      <if test="lbigintroductions != null" >
+        lbigintroductions = #{lbigintroductions,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where RouteOuteid = #{routeouteid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fjut.oj.edu.pojo.TRoute" >
+    update t_route
+    set courseId = #{courseid,jdbcType=BIGINT},
+      problemId = #{problemid,jdbcType=BIGINT},
+      lname = #{lname,jdbcType=VARCHAR},
+      lbigintroductions = #{lbigintroductions,jdbcType=VARCHAR}
+    where RouteOuteid = #{routeouteid,jdbcType=BIGINT}
+  </update>
+</mapper>
