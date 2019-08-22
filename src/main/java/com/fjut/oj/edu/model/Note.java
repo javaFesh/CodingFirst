@@ -1,28 +1,28 @@
 package com.fjut.oj.edu.model;
 
 public class Note {
-    private Long noteId;//笔记ID
+    private Integer noteId;//笔记ID
 
-    private String userId;//用户ID
+    private Integer userId;//用户ID
 
     private String noteTitle; //笔记名称
 
     private String noteText;   //笔记内容
 
 
-    public Long getNoteId() {
+    public Integer getNoteId() {
         return noteId;
     }
 
-    public void setNoteId(Long noteId) {
+    public void setNoteId(Integer noteId) {
         this.noteId = noteId;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

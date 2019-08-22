@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fjut.oj.edu.dao.UsersDao" >
+
+
+  <select id="queryAll" resultType="com.fjut.oj.edu.model.User">
+    select * from  t_users
+</select>
+  <select id="insert" resultMap="com.fjut.oj.edu.model.User" parameterType="com.fjut.oj.edu.model.User">
+    insert into t_users values(#{com.fjut.oj.edu.model.User.userId},#{com.fjut.oj.edu.model.User.userPwd},#{com.fjut.oj.edu.model.User.nick},#{com.fjut.oj.edu.model.User.gender},#{com.fjut.oj.edu.model.User.school},#{com.fjut.oj.edu.model.User.Email},#{com.fjut.oj.edu.model.User.mottp},#{com.fjut.oj.edu.model.User.registertime},#{com.fjut.oj.edu.model.User.acb},
+    #{com.fjut.oj.edu.model.User.name},#{com.fjut.oj.edu.model.User.phone},#{com.fjut.oj.edu.model.User.acnum},#{com.fjut.oj.edu.model.User.userImg})
+  </select>
+
+  <select id="queryById" resultMap="com.fjut.oj.edu.model.User" parameterType="com.fjut.oj.edu.model.User">
+    select * from t_users where userId=#{com.fjut.oj.edu.model.User.userId}   and userPwd=#{com.fjut.oj.edu.model.User.userPwd}
+    </select>
+
+
+</mapper>

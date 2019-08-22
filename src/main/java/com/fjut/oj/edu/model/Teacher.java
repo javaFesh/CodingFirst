@@ -3,13 +3,13 @@ package com.fjut.oj.edu.model;
 import java.util.Date;
 
 public class Teacher {
-    private String teacherId;
+    private Integer teacherId;
 
     private String teacherPwd;
 
     private String nick;
 
-    private Long gender;
+    private Integer gender;
 
     private String school;
 
@@ -23,11 +23,11 @@ public class Teacher {
 
     private String phone;
 
-    public String getTeacherId() {
+    public Integer getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(String teacherId) {
+    public void setTeacherId(Integer teacherId) {
         this.teacherId = teacherId;
     }
 
@@ -47,11 +47,11 @@ public class Teacher {
         this.nick = nick == null ? null : nick.trim();
     }
 
-    public Long getGender() {
+    public Integer getGender() {
         return gender;
     }
 
-    public void setGender(Long gender) {
+    public void setGender(Integer gender) {
         this.gender = gender;
     }
 

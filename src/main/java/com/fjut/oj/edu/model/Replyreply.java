@@ -3,46 +3,46 @@ package com.fjut.oj.edu.model;
 import java.util.Date;
 
 public class Replyreply  {
-    private Long replyReplyId;//回复回复ID
+    private Integer replyReplyId;//回复回复ID
 
-    private Long replyId;//被回复的ID
+    private Integer replyId;//被回复的ID
 
-    private Long discussId;//被讨论的讨论ID
-    private String userId;//回复人Id
+    private Integer discussId;//被讨论的讨论ID
+    private Integer userId;//回复人Id
 
     private Date replyTime;//回复时间
 
     private String replyText;//回复内容
 
-    public Long getReplyReplyId() {
+    public Integer getReplyReplyId() {
         return replyReplyId;
     }
 
-    public void setReplyReplyId(Long replyReplyId) {
+    public void setReplyReplyId(Integer replyReplyId) {
         this.replyReplyId = replyReplyId;
     }
 
-    public Long getReplyId() {
+    public Integer getReplyId() {
         return replyId;
     }
 
-    public void setReplyId(Long replyId) {
+    public void setReplyId(Integer replyId) {
         this.replyId = replyId;
     }
 
-    public Long getDiscussId() {
+    public Integer getDiscussId() {
         return discussId;
     }
 
-    public void setDiscussId(Long discussId) {
+    public void setDiscussId(Integer discussId) {
         this.discussId = discussId;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

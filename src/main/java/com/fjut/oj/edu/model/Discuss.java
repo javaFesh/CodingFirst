@@ -6,21 +6,21 @@ import java.util.Date;
  * 讨论表
  */
 public class Discuss {
-    private Long discussId;//ID
+    private Integer discussId;//ID
 
     private String discussTitle;//讨论标题
 
     private Date discussTime;//讨论发起时间
 
-    private String discussAuthor;//讨论发起人
+    private Integer discussAuthor;//讨论发起人
 
-    private Long discussdAcb;//悬赏的ACB
+    private Integer discussdAcb;//悬赏的ACB
 
-    public Long getDiscussId() {
+    public Integer getDiscussId() {
         return discussId;
     }
 
-    public void setDiscussId(Long discussId) {
+    public void setDiscussId(Integer discussId) {
         this.discussId = discussId;
     }
 
@@ -40,19 +40,19 @@ public class Discuss {
         this.discussTime = discussTime;
     }
 
-    public String getDiscussAuthor() {
+    public Integer getDiscussAuthor() {
         return discussAuthor;
     }
 
-    public void setDiscussAuthor(String discussAuthor) {
+    public void setDiscussAuthor(Integer discussAuthor) {
         this.discussAuthor = discussAuthor;
     }
 
-    public Long getDiscussdAcb() {
+    public Integer getDiscussdAcb() {
         return discussdAcb;
     }
 
-    public void setDiscussdAcb(Long discussdAcb) {
+    public void setDiscussdAcb(Integer discussdAcb) {
         this.discussdAcb = discussdAcb;
     }
 }

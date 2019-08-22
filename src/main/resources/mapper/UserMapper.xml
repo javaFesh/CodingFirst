@@ -4,7 +4,19 @@
 
 
   <select id="queryAll" resultType="com.fjut.oj.edu.model.User">
-    select * from  t_users
+    select * from t_users
 </select>
+  <select id="insert" resultType="com.fjut.oj.edu.model.User" parameterType="com.fjut.oj.edu.model.User">
+    insert into t_users values(NULL,#{User.userPwd},#{User.nick},NULL,NULL,NULL,NULL,#{User.registertime},NULL ,NULL,NULL,NULL,NULL)
+  </select>
+
+  <select id="queryById" resultType="com.fjut.oj.edu.model.User" parameterType="com.fjut.oj.edu.model.User">
+    select * from t_users where nick=#{User.nick}   and userPwd=#{User.userPwd}
+    </select>
+
+  <select id="selectNick" resultType="com.fjut.oj.edu.model.User" parameterType="java.lang.String">
+    select * from t_users where nick=#{nick}
+  </select>
+
 
 </mapper>

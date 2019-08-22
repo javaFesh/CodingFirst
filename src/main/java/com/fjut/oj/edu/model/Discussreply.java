@@ -8,13 +8,13 @@ import java.util.Date;
 public class Discussreply  {
     private Date replyTime;//回复时间
 
-    private String userId;//回复人
+    private Integer userId;//回复人
 
 
     private String replyText;//回复内容
 
 
-    private Long replyId;//回复ID
+    private Integer replyId;//回复ID
 
     private Discuss discussId;//被回复讨论ID
 
@@ -26,11 +26,11 @@ public class Discussreply  {
         this.replyTime = replyTime;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -42,11 +42,11 @@ public class Discussreply  {
         this.replyText = replyText;
     }
 
-    public Long getReplyId() {
+    public Integer getReplyId() {
         return replyId;
     }
 
-    public void setReplyId(Long replyId) {
+    public void setReplyId(Integer replyId) {
         this.replyId = replyId;
     }
 

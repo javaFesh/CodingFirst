@@ -3,7 +3,7 @@ package com.fjut.oj.edu.model;
 import java.util.Date;
 
 public class User {
-    private String userId;///用户名
+    private Integer userId;///用户名
 
     private String userPwd;//用户密码
 
@@ -21,15 +21,15 @@ public class User {
 
     private Date registertime;//注册时间
 
-    private Long type;//用户类型
+    private Integer type;//用户类型
 
-    private Long acb;//
+    private Integer acb;//
 
     private String name;//真实姓名
 
     private String phone;
 
-    private Long acnum;//通过的题目数
+    private Integer acnum;//通过的题目数
 
 
 
@@ -42,11 +42,11 @@ public class User {
         this.userimg = userimg;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -106,19 +106,19 @@ public class User {
         this.registertime = registertime;
     }
 
-    public Long getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(Long type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
-    public Long getAcb() {
+    public Integer getAcb() {
         return acb;
     }
 
-    public void setAcb(Long acb) {
+    public void setAcb(Integer acb) {
         this.acb = acb;
     }
 
@@ -138,11 +138,11 @@ public class User {
         this.phone = phone == null ? null : phone.trim();
     }
 
-    public Long getAcnum() {
+    public Integer getAcnum() {
         return acnum;
     }
 
-    public void setAcnum(Long acnum) {
+    public void setAcnum(Integer acnum) {
         this.acnum = acnum;
     }
 

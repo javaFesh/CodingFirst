@@ -53,4 +53,6 @@
 
 
     <mvc:resources mapping="/static/**" location="/static/" />
+    <mvc:annotation-driven/>
+    <mvc:default-servlet-handler/>
 </beans>

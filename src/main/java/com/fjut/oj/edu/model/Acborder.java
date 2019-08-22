@@ -3,47 +3,47 @@ package com.fjut.oj.edu.model;
 import java.util.Date;
 
 public class Acborder {
-    private Long orderId;//账单Id
+    private Integer orderId;//账单Id
 
-    private Long userId;//用户ID
+    private Integer userId;//用户ID
 
-    private Long acbChange;//ACB改变数量
+    private Integer acbChange;//ACB改变数量
 
-    private Long reason;//改变原因
+    private Integer reason;//改变原因
 
     private String mark;//备注
 
     private Date time;//改变时间
 
-    public Long getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Long orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public Long getAcbChange() {
+    public Integer getAcbChange() {
         return acbChange;
     }
 
-    public void setAcbChange(Long acbChange) {
+    public void setAcbChange(Integer acbChange) {
         this.acbChange = acbChange;
     }
 
-    public Long getReason() {
+    public Integer getReason() {
         return reason;
     }
 
-    public void setReason(Long reason) {
+    public void setReason(Integer reason) {
         this.reason = reason;
     }
 

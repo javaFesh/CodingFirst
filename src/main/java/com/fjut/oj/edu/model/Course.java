@@ -3,7 +3,7 @@ package com.fjut.oj.edu.model;
 import java.util.Date;
 
 public class Course {
-    private Long courseId;//课程ID
+    private Integer courseId;//课程ID
 
     private String courseName;//课程名称
 
@@ -11,25 +11,25 @@ public class Course {
 
     private String courseImg;//课程图片
 
-    private Long courseLength;//课程节数
+    private Integer courseLength;//课程节数
 
     private Date courseStartTime;//课程开始时间
 
     private Date courseEndTime;//课程结束时间
 
-    private Long teacherId;
+    private Integer teacherId;
 
     private Double courseCharge;//课程价格
 
-    private Long courseNumAccount;//课程人数
+    private Integer courseNumAccount;//课程人数
 
-    private Long coursePush;//课程推送与否0为默认，-1为推送
+    private Integer coursePush;//课程推送与否0为默认，-1为推送
 
-    public Long getCourseId() {
+    public Integer getCourseId() {
         return courseId;
     }
 
-    public void setCourseId(Long courseId) {
+    public void setCourseId(Integer courseId) {
         this.courseId = courseId;
     }
 
@@ -57,11 +57,11 @@ public class Course {
         this.courseImg = courseImg;
     }
 
-    public Long getCourseLength() {
+    public Integer getCourseLength() {
         return courseLength;
     }
 
-    public void setCourseLength(Long courseLength) {
+    public void setCourseLength(Integer courseLength) {
         this.courseLength = courseLength;
     }
 
@@ -81,11 +81,11 @@ public class Course {
         this.courseEndTime = courseEndTime;
     }
 
-    public Long getTeacherId() {
+    public Integer getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(Long teacherId) {
+    public void setTeacherId(Integer teacherId) {
         this.teacherId = teacherId;
     }
 
@@ -97,19 +97,19 @@ public class Course {
         this.courseCharge = courseCharge;
     }
 
-    public Long getCourseNumAccount() {
+    public Integer getCourseNumAccount() {
         return courseNumAccount;
     }
 
-    public void setCourseNumAccount(Long courseNumAccount) {
+    public void setCourseNumAccount(Integer courseNumAccount) {
         this.courseNumAccount = courseNumAccount;
     }
 
-    public Long getCoursePush() {
+    public Integer getCoursePush() {
         return coursePush;
     }
 
-    public void setCoursePush(Long coursePush) {
+    public void setCoursePush(Integer coursePush) {
         this.coursePush = coursePush;
     }
 }
