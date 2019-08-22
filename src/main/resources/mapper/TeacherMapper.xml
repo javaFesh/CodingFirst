@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.fjut.oj.edu.dao.UsersDao" >
+<mapper namespace="com.fjut.oj.edu.dao.TeacherDao" >
 
 
   <select id="queryAll" resultType="com.fjut.oj.edu.model.Teacher">
     select * from t_teacher
 </select>
   <select id="insert" resultType="com.fjut.oj.edu.model.Teacher" parameterType="com.fjut.oj.edu.model.Teacher">
-    insert into t_teacher values(NULL,#{Teacher.teacherPwd},#{User.nick},NULL,NULL,NULL,NULL,#{Teacher.registertime},NULL ,NULL)
+    insert into t_teacher values(NULL,#{Teacher.teacherPwd},#{Teacher.nick},NULL,NULL,NULL,NULL,#{Teacher.registertime},NULL ,NULL)
   </select>
 
   <select id="queryById" resultType="com.fjut.oj.edu.model.Teacher" parameterType="com.fjut.oj.edu.model.Teacher">
