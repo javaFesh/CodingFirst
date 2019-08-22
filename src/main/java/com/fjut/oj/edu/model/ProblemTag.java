@@ -1,16 +1,16 @@
 package com.fjut.oj.edu.model;
 
 public class ProblemTag {
-    private Long pTagId;//标签ID
+    private Integer pTagId;//标签ID
 
     private String pTagName;//标签名
 
 
-    public Long getpTagId() {
+    public Integer getpTagId() {
         return pTagId;
     }
 
-    public void setpTagId(Long pTagId) {
+    public void setpTagId(Integer pTagId) {
         this.pTagId = pTagId;
     }
 

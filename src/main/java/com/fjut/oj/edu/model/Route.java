@@ -1,37 +1,37 @@
 package com.fjut.oj.edu.model;
 
 public class Route {
-    private Long routeouteId;//学习路线ID
+    private Integer routeouteId;//学习路线ID
 
-    private Long courseId;//课程ID
+    private Integer courseId;//课程ID
 
-    private Long problemId;//题目ID
+    private Integer problemId;//题目ID
 
     private String lname;//学习路线名称
 
     private String lbigintroductions;//学习路线描述
 
-    public Long getRouteouteId() {
+    public Integer getRouteouteId() {
         return routeouteId;
     }
 
-    public void setRouteouteId(Long routeouteId) {
+    public void setRouteouteId(Integer routeouteId) {
         this.routeouteId = routeouteId;
     }
 
-    public Long getCourseId() {
+    public Integer getCourseId() {
         return courseId;
     }
 
-    public void setCourseId(Long courseId) {
+    public void setCourseId(Integer courseId) {
         this.courseId = courseId;
     }
 
-    public Long getProblemId() {
+    public Integer getProblemId() {
         return problemId;
     }
 
-    public void setProblemId(Long problemId) {
+    public void setProblemId(Integer problemId) {
         this.problemId = problemId;
     }
 

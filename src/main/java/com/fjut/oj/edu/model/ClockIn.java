@@ -3,25 +3,25 @@ package com.fjut.oj.edu.model;
 import java.util.Date;
 
 public class ClockIn {
-    private Long id;
+    private Integer id;
 
-    private String userId;
+    private Integer userId;
 
     private Date time;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

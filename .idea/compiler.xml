@@ -9,6 +9,8 @@
         <module name="CodingFirst" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel>
+      <module name="CodingFirst" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

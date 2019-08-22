@@ -1,37 +1,37 @@
 package com.fjut.oj.edu.model;
 
 public class Problem {
-    private Long problemId;//题目ID
+    private Integer problemId;//题目ID
 
-    private Long problemType;//题目类型
+    private Integer problemType;//题目类型
 
     private String problemTitle;//题目标题
 
-    private Long problemAward;//题目完成积分
+    private Integer problemAward;//题目完成积分
 
-    private String problemAuthor;//题目作者
+    private Integer problemAuthor;//题目作者
 
-    private String problemOwner;//题目所有者
+    private Integer problemOwner;//题目所有者
 
-    private Long discussId;//讨论区Id（创建题目的同时建立讨论区两者绑定）
+    private Integer discussId;//讨论区Id（创建题目的同时建立讨论区两者绑定）
 
     private String problemAns;//题目答案
 
     private String problemAnalysis;//题目解析
 
-    public Long getProblemId() {
+    public Integer getProblemId() {
         return problemId;
     }
 
-    public void setProblemId(Long problemId) {
+    public void setProblemId(Integer problemId) {
         this.problemId = problemId;
     }
 
-    public Long getProblemType() {
+    public Integer getProblemType() {
         return problemType;
     }
 
-    public void setProblemType(Long problemType) {
+    public void setProblemType(Integer problemType) {
         this.problemType = problemType;
     }
 
@@ -43,35 +43,35 @@ public class Problem {
         this.problemTitle = problemTitle;
     }
 
-    public Long getProblemAward() {
+    public Integer getProblemAward() {
         return problemAward;
     }
 
-    public void setProblemAward(Long problemAward) {
+    public void setProblemAward(Integer problemAward) {
         this.problemAward = problemAward;
     }
 
-    public String getProblemAuthor() {
+    public Integer getProblemAuthor() {
         return problemAuthor;
     }
 
-    public void setProblemAuthor(String problemAuthor) {
+    public void setProblemAuthor(Integer problemAuthor) {
         this.problemAuthor = problemAuthor;
     }
 
-    public String getProblemOwner() {
+    public Integer getProblemOwner() {
         return problemOwner;
     }
 
-    public void setProblemOwner(String problemOwner) {
+    public void setProblemOwner(Integer problemOwner) {
         this.problemOwner = problemOwner;
     }
 
-    public Long getDiscussId() {
+    public Integer getDiscussId() {
         return discussId;
     }
 
-    public void setDiscussId(Long discussId) {
+    public void setDiscussId(Integer discussId) {
         this.discussId = discussId;
     }
 

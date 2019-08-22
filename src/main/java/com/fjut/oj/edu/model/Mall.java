@@ -3,25 +3,71 @@ package com.fjut.oj.edu.model;
 import java.util.Date;
 
 public class Mall {
-    private Long mallId;
+    private Integer mallId;//商品ID
 
-    private String mallTitle;
+    private String mallTitle;//商品标题
 
-    private Long acb;
+    private String mallImg;//商品图片
 
-    private Long rmb;
+    private Integer acb;//所需ACB
 
-    private String userId;
+    private Integer rmb;//人民币
 
-    private Date endTime;
+    private Integer userId;//发布者ID
 
-    private Long buyLimit;
+    private Date endTime;//截止时间
 
-    public Long getMallId() {
+    private Integer buyLimit;//购买限制
+
+    private Integer mallAccount;//商品数量
+
+    public Mall() {
+    }
+
+
+    public Integer getMallAccount() {
+        return mallAccount;
+    }
+
+    public void setMallAccount(Integer mallAccount) {
+        this.mallAccount = mallAccount;
+    }
+
+    public Mall( String mallTitle, String mallImg, Integer acb, Integer rmb, Integer userId, Date endTime, Integer buyLimit, Integer mallAccount) {
+        this.mallTitle = mallTitle;
+        this.mallImg = mallImg;
+        this.acb = acb;
+        this.rmb = rmb;
+        this.userId = userId;
+        this.endTime = endTime;
+        this.buyLimit = buyLimit;
+        this.mallAccount = mallAccount;
+    }
+    public Mall(Integer mallId, String mallTitle, String mallImg, Integer acb, Integer rmb, Integer userId, Date endTime, Integer buyLimit, Integer mallAccount) {
+        this.mallId = mallId;
+        this.mallTitle = mallTitle;
+        this.mallImg = mallImg;
+        this.acb = acb;
+        this.rmb = rmb;
+        this.userId = userId;
+        this.endTime = endTime;
+        this.buyLimit = buyLimit;
+        this.mallAccount = mallAccount;
+    }
+
+    public String getMallImg() {
+        return mallImg;
+    }
+
+    public void setMallImg(String mallImg) {
+        this.mallImg = mallImg;
+    }
+
+    public Integer getMallId() {
         return mallId;
     }
 
-    public void setMallId(Long mallId) {
+    public void setMallId(Integer mallId) {
         this.mallId = mallId;
     }
 
@@ -33,27 +79,27 @@ public class Mall {
         this.mallTitle = mallTitle;
     }
 
-    public Long getAcb() {
+    public Integer getAcb() {
         return acb;
     }
 
-    public void setAcb(Long acb) {
+    public void setAcb(Integer acb) {
         this.acb = acb;
     }
 
-    public Long getRmb() {
+    public Integer getRmb() {
         return rmb;
     }
 
-    public void setRmb(Long rmb) {
+    public void setRmb(Integer rmb) {
         this.rmb = rmb;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -65,11 +111,11 @@ public class Mall {
         this.endTime = endTime;
     }
 
-    public Long getBuyLimit() {
+    public Integer getBuyLimit() {
         return buyLimit;
     }
 
-    public void setBuyLimit(Long buyLimit) {
+    public void setBuyLimit(Integer buyLimit) {
         this.buyLimit = buyLimit;
     }
 }

@@ -1,21 +1,21 @@
 package com.fjut.oj.edu.model;
 
 public class Collect {
-    private Long collectId;//收藏ID
+    private Integer collectId;//收藏ID
 
     private String userId;//用户ID
 
-    private Long problemId; //问题ID
+    private Integer problemId; //问题ID
 
-    private Long courseId;//课程ID
+    private Integer courseId;//课程ID
 
-    private Long discussId;//讨论区ID
+    private Integer discussId;//讨论区ID
 
-    public Long getCollectId() {
+    public Integer getCollectId() {
         return collectId;
     }
 
-    public void setCollectId(Long collectId) {
+    public void setCollectId(Integer collectId) {
         this.collectId = collectId;
     }
 
@@ -27,27 +27,27 @@ public class Collect {
         this.userId = userId;
     }
 
-    public Long getProblemId() {
+    public Integer getProblemId() {
         return problemId;
     }
 
-    public void setProblemId(Long problemId) {
+    public void setProblemId(Integer problemId) {
         this.problemId = problemId;
     }
 
-    public Long getCourseId() {
+    public Integer getCourseId() {
         return courseId;
     }
 
-    public void setCourseId(Long courseId) {
+    public void setCourseId(Integer courseId) {
         this.courseId = courseId;
     }
 
-    public Long getDiscussId() {
+    public Integer getDiscussId() {
         return discussId;
     }
 
-    public void setDiscussId(Long discussId) {
+    public void setDiscussId(Integer discussId) {
         this.discussId = discussId;
     }
 }

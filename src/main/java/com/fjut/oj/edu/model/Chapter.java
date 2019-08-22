@@ -1,9 +1,9 @@
 package com.fjut.oj.edu.model;
 
 public class Chapter {
-    private Long chapterId;//课时ID
+    private Integer chapterId;//课时ID
 
-    private Long courseId;//对相应的课程ID
+    private Integer courseId;//对相应的课程ID
 
     private String chapterName;//章节名称
 
@@ -12,19 +12,19 @@ public class Chapter {
     private String chapterResource;//章节资源
 
 
-    public Long getChapterId() {
+    public Integer getChapterId() {
         return chapterId;
     }
 
-    public void setChapterId(Long chapterId) {
+    public void setChapterId(Integer chapterId) {
         this.chapterId = chapterId;
     }
 
-    public Long getCourseId() {
+    public Integer getCourseId() {
         return courseId;
     }
 
-    public void setCourseId(Long courseId) {
+    public void setCourseId(Integer courseId) {
         this.courseId = courseId;
     }
 
