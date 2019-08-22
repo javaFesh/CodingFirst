@@ -43,4 +43,12 @@ public class MallTest extends BaseJunit4Test {
 
 
     }
-}
+
+
+    @Test
+    public void testCount() {
+        System.out.println(" AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA "+mallDao.getMallCount());
+
+
+    }
+    }

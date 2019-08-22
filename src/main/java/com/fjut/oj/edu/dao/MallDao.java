@@ -11,6 +11,9 @@ public interface MallDao {
     //查询全部商品
     List<Mall> findAllMall();
 
+    //查询Mall总数
+    Integer getMallCount();
+
     //分页查询全部商品
     List<Mall> findAllByPage(RowBounds rowBounds);
 

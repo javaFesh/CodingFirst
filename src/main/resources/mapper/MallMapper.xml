@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fjut.oj.edu.dao.MallDao">
+    <!--查询全部商品-->
+    <select id="findAllMall" resultType="com.fjut.oj.edu.model.Mall">
+    select * from t_mall
+    </select>
+
+    <!--分页查询全部商品
+    List<Mall> findAllByPage(RowBounds rowBounds);-->
+    <select id="findAllByPage" resultType="com.fjut.oj.edu.model.Mall">
+      select * from t_mall
+    </select>
+<!--private Long mallId;//商品ID
+
+    private String mallTitle;//商品标题
+
+    private String mallImg;//商品图片
+
+    private Long acb;//所需ACB
+
+    private Long rmb;//人民币
+
+    private String userId;//发布者ID
+
+    private Date endTime;//截止时间
+
+    private Long buyLimit;//购买限制
+
+    private Long mallAccount;//商品数量-->
+    <!--添加商品
+    Boolean insertMall(Mall mall);-->
+
+    <insert id="insertMall" parameterType="com.fjut.oj.edu.model.Mall">
+        insert into t_mall (mallTitle,acb,rmb,userId,endTime,buyLimit,mallImg,mallAccount)
+        values(#{mallTitle},#{acb},#{rmb},#{userId},#{endTime},#{buyLimit},#{mallImg},#{mallAccount})
+    </insert>
+    <!--修改商品信息
+    Boolean updataMall(Mall mall);-->
+    <update id="updataMall" parameterType="com.fjut.oj.edu.model.Mall">
+           update t_mall set mallTitle = #{mallTitle}, acb = #{acb}, rmb = #{rmb},userId=#{userId}, endTime = #{endTime},buyLimit=#{buyLimit},mallImg=#{mallImg},mallAccount=#{mallAccount}
+               where mallId = #{mallId};
+   </update>
+    <!--根据ID查询商品
+    Mall findById(Integer id);-->
+    <select id="findById" resultType="com.fjut.oj.edu.model.Mall">
+      select * from t_mall where mallId = #{mallId};
+    </select>
+
+
+
+    <!--删除商品-->
+    <delete id="deleteMallById">
+        delete from t_mall where  where mallId = #{mallId};
+    </delete>
+
+<!--查询分页总数
+    Integer getMallCount();-->
+
+    <select id="getMallCount" resultType="java.lang.Integer">
+        select COUNT(*) from t_mall;
+    </select>
+
+</mapper>
