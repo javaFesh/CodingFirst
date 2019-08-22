@@ -1,0 +1,121 @@
+create database wuyou;
+create table user(
+	user_id int PRIMARY KEY AUTO_INCREMENT comment '用户id',
+    user_name varchar(20) not null unique comment '用户名称',
+    user_password varchar(30) not null comment '用户密码',
+    user_picture varchar(50) comment '用户头像地址',
+    user_phone varchar(30) not null comment '用户电话',
+    user_email varchar(30) comment '用户邮箱',
+    user_age int comment '用户年龄',
+    user_school varchar(30) comment '毕业院校',
+    user_exp_study varchar(1000) comment '学习经历',
+    user_exp varchar(1000) comment '工作经历',
+    user_introduce varchar(1000) comment '自我评价',
+    user_file varchar(50) comment '用户简历附件地址',
+    user_param1 varchar(100) comment '预留字段1',
+    user_param2 varchar(100) comment '预留字段2'
+
+    );
+
+    create table company(
+	company_id int PRIMARY KEY AUTO_INCREMENT comment '公司id',
+    company_name varchar(20) not null unique comment '公司名称',
+    company_password varchar(30) not null comment '用户密码',
+    company_picture varchar(50) comment '公司头像地址',
+    company_phone varchar(30) not null comment '公司电话',
+    company_email varchar(30) not null comment '公司邮箱',
+    company_address varchar(50) not null comment '公司地址',
+	company_identify varchar(50) not null comment '公司营业执照照片地址',
+    company_describe varchar(500) not null comment '公司描述',
+    company_state int not null comment '注册审核情况默认为0，审核通过后为1，登陆时进行判断1可登陆',
+    company_param1 varchar(100) comment '预留字段1',
+    company_param2 varchar(100) comment '预留字段2'
+
+    );
+
+    create table admin(
+	admin_id int PRIMARY KEY AUTO_INCREMENT comment '公司id',
+    admin_name varchar(20) not null unique comment '公司名称',
+    admin_password varchar(30) not null comment '用户密码',
+    company_param1 varchar(100) comment '预留字段1'
+
+    );
+
+    create table type(
+    type_id int PRIMARY KEY AUTO_INCREMENT comment '类型id',
+    type_name varchar(20) not null comment '类型名称'
+    );
+
+    create table writing(
+    write_id int PRIMARY KEY AUTO_INCREMENT comment '笔试试题id',
+    write_title varchar(200) not null comment '试题题目',
+    write_answer varchar(1000) not null comment '试题答案',
+    write_type_id int not null comment '试题类型id'
+
+    );
+
+    create table interview(
+    interview_id int PRIMARY KEY AUTO_INCREMENT comment '面试试题id',
+    interview_title varchar(200) not null comment '面试题目',
+    interview_answer varchar(1000) not null comment '面试答案',
+    interview_type_id int not null comment '面试类型id'
+
+    );
+
+create table interview_skill(
+    skill_id int PRIMARY KEY AUTO_INCREMENT comment '面试技巧id',
+    skill_question varchar(200) not null comment '面试时遇到的问题',
+    skill_answer varchar(1000) not null comment '解决方案'
+
+);
+
+
+CREATE TABLE `resume` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT COMMENT 'id',
+  `user_id` INT NOT NULL COMMENT '用户id',
+  `work_id` INT NOT NULL COMMENT '职位id',
+  `progress` INT NOT NULL COMMENT '进度',
+  `test` varchar(1000) NULL COMMENT '预留1')
+COMMENT = '已投简历信息表';
+
+CREATE TABLE `comment` (
+  `comment_id` INT PRIMARY KEY AUTO_INCREMENT COMMENT '评论信息id',
+  `comment_post_id` INT NOT NULL COMMENT '贴子id',
+  `comment_user_id` INT NOT NULL COMMENT '用户id',
+  `comment_create_time` VARCHAR(30) NOT NULL COMMENT '评论创建时间',
+  `comment_context` VARCHAR(1000) NOT NULL COMMENT '评论内容',
+  `comment_test` VARCHAR(1000) NULL COMMENT '预留1')
+COMMENT = '评论信息表';
+
+CREATE TABLE `work` (
+  `work_id` INT PRIMARY KEY AUTO_INCREMENT COMMENT '工作id',
+  `user_id` INT NOT NULL COMMENT '用户id',
+  `company_id` INT NOT NULL COMMENT '公司id',
+  `work_type` VARCHAR(45) NOT NULL COMMENT '职位种类/工种',
+  `work_details` VARCHAR(1000) NOT NULL COMMENT '职位简介',
+  `work_salary` INT NOT NULL COMMENT '薪资',
+  `experience` VARCHAR(2000) NOT NULL COMMENT '工作经验',
+  `degree` VARCHAR(45) NOT NULL COMMENT '学位',
+  `workplace` VARCHAR(100) NOT NULL COMMENT '工作地点',
+  `test` VARCHAR(1000) NULL COMMENT '预留')
+COMMENT = '工作信息表';
+
+create table wrriten_answer
+(
+	id int PRIMARY KEY AUTO_INCREMENT COMMENT'笔试id',
+    question_id int(10) not null comment '笔试问题id',
+    user_id int(10) not null comment '用户id',
+    user_answer varchar(2000) comment '用户答案',
+    de_param varchar(200) comment '预留字段'
+) comment '用户笔试表';
+
+create table invitation
+(
+	id int(10) primary key auto_increment comment '帖子id',
+    title varchar(200) not null comment '帖子标题',
+    user_id int(10) not null comment '发帖人id',
+    create_time varchar(20) not null comment '发帖时间',
+    t_context varchar(1000) comment '帖子内容',
+    de_param varchar(200) comment '预留字段'
+) comment '帖子表';
+

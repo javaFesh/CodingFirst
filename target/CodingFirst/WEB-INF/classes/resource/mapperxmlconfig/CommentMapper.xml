@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.CommentMapper">
+    <resultMap id="myComment" type="com.colin.bean.Comment">
+        <id property="commentId" column="comment_id"/>
+        <result property="commentPostId" column="comment_post_id"/>
+        <result property="commentCreateTime" column="comment_create_time"/>
+        <result property="commentContent" column="comment_content"/>
+        <association property="user" column="comment_user_id" javaType="com.colin.bean.User">
+            <id property="userId" column="user_id"/>
+            <result property="userName" column="user_name"/>
+            <result property="userPassword" column="user_password"/>
+            <result property="userPicture" column="user_picture"/>
+            <result property="userPhone" column="user_phone"/>
+            <result property="userEmail" column="user_email"/>
+            <result property="userAge" column="user_age"/>
+            <result property="userSchool" column="user_school"/>
+            <result property="userExpStudy" column="user_exp_study"/>
+            <result property="userExp" column="user_exp"/>
+            <result property="userIntroduce" column="user_introduce"/>
+            <result property="userFile" column="user_file"/>
+        </association>
+    </resultMap>
+    <insert id="addComment" parameterType="com.colin.bean.Comment">
+        insert into comment(comment_post_id,comment_user_id,comment_create_time,comment_content)
+        values(#{commentPostId},#{user.userId},#{commentCreateTime},#{commentContent})
+    </insert>
+    <select id="selectCommentByPostId" resultMap="myComment">
+        select
+        comment_id,comment_post_id,comment_user_id,comment_create_time,comment_content,user.user_name,user_picture
+        from comment,user
+        where comment_user_id = user.user_id and comment_post_id = #{id}
+    </select>
+    <select id="selectCommentByCommentId" resultMap="myComment">
+        select comment_id,comment_post_id,comment_user_id,comment_create_time,comment_content,user.user_name
+        from comment,user
+        where comment_id=#{commentId}
+    </select>
+    <delete id="deleteComment">
+        delete from comment where comment_id = (#{commentId})
+    </delete>
+
+</mapper>

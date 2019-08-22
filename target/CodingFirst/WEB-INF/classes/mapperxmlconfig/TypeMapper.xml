@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.TypeMapper">
+    <insert id="addType" parameterType="type">
+      insert into type  (type_name)  values (#{type})
+    </insert>
+    <insert id="insertType" parameterType="type">
+        insert into  type (father_type, type_name) values (#{fatherType},#{type})
+    </insert>
+    <insert id="insertType1">
+        insert into  type1 values (null,#{typeName})
+    </insert>
+    <delete id="typeDelete">
+        delete from type where type_id=#{id}
+    </delete>
+    <delete id="typeDelete1">
+        delete from type1 where type_id=#{id}
+    </delete>
+
+    <select id="selectAll" resultType="com.colin.bean.Type">
+        select t.type_id id,t.type_name type from type t where t.father_type=#{father_type}
+    </select>
+    <select id="selectAllTypeHouTai" resultType="com.colin.bean.Type">
+           select t.type_id id,t.type_name type ,t.father_type  fatherType from type t
+    </select>
+    <select id="findTotalCount" resultType="java.lang.Integer">
+        select count(type_id) from  type;
+    </select>
+    <select id="findByPage" resultType="com.colin.bean.Type">
+        select t.type_id id,t.type_name type ,t.father_type  fatherType from type t
+        limit #{param1},#{param2};
+    </select>
+    <select id="findTotalCount1" resultType="java.lang.Integer">
+        select count(type_id) from  type1;
+    </select>
+    <select id="findByPage1" resultType="com.colin.bean.Type1">
+        select t.type_id typeId,t.type_name typeName from type1 t
+        limit #{param1},#{param2};
+    </select>
+    <select id="selectAllTypeOfInterview1" resultMap="com.colin.mapper.UserMapper.typeResult">
+        select type_id, type_name from type1
+    </select>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.InvitationTypeMapper">
+    <resultMap id="myInvitationType" type="com.colin.bean.InvitationType">
+        <id property="invitationTypeId" column="invitation_type_id"/>
+        <result property="invitationTypeName" column="invitation_type_name"/>
+    </resultMap>
+    <insert id="addInvitationType">
+        insert into invitation_type(invitation_type_name) values(#{invitationTypeName2})
+    </insert>
+    <select id="selectAllInvitationType" resultMap="myInvitationType">
+        select invitation_type_id,invitation_type_name from invitation_type
+     </select>
+
+    <select id="selectInvitationTypeByName" resultMap="myInvitationType">
+            select invitation_type_id,invitation_type_name from invitation_type where invitation_type_name = #{invitationTypeName};
+    </select>
+
+</mapper>

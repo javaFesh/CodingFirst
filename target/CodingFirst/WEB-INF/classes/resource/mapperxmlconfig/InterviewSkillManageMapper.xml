@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.InterviewSkillManageMapper">
+    <resultMap id="interviewSkillResult" type="com.colin.bean.InterviewSkill">
+        <id property="skillId" column="skill_id"/>
+        <result property="skillQuestion" column="skill_question"/>
+        <result property="skillAnswer" column="skill_answer"/>
+    </resultMap>
+    <insert id="addInterviewSkill">
+        insert into interview_skill values(null, #{skillQuestion}, #{skillAnswer})
+    </insert>
+    <insert id="addInterview">
+        insert into interview values(null, #{interviewTitle}, #{interviewAnswer}, #{interviewTypeId})
+    </insert>
+
+    <delete id="deleteInterviewSkillById">
+        delete from interview_skill where skill_id = #{id}
+    </delete>
+    <delete id="deleteInterviewById">
+        delete from interview where interview_id = #{id}
+    </delete>
+    <select id="selectAllInterviewSkill" resultMap="interviewSkillResult">
+        select skill_id, skill_question, skill_answer
+        from interview_skill
+        limit #{param1},#{param2}
+    </select>
+    <select id="getSkillTotalCount" resultType="java.lang.Integer">
+        select count(skill_id) sum from interview_skill
+    </select>
+    <select id="getInterviewTotalCount" resultType="java.lang.Integer">
+        select count(interview_id) from  interview
+    </select>
+    <select id="selectAllInterview" resultMap="com.colin.mapper.UserMapper.interviewResult">
+        select i.interview_id, i.interview_title, i.interview_answer, t.type_name
+        from interview i
+        inner join type1 t on t.type_id = i.interview_type_id
+        limit #{param1},#{param2}
+    </select>
+
+</mapper>

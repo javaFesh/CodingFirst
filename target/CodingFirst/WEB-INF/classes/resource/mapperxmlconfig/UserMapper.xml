@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.UserMapper">
+    <resultMap id="userResult" type="com.colin.bean.User">
+        <id property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userPassword" column="user_password"/>
+    </resultMap>
+    <insert id="insertUser">
+        insert into user(user_name, user_password) values(#{userName}, #{userPassword})
+    </insert>
+    <insert id="insertInterviewAnswer">
+        insert into interview_answer values(null, #{param2}, #{param1}, #{param3}, null)
+    </insert>
+    <update id="doUpdateUserOfExp">
+        update user
+        set user_name2 = #{userName2},
+        user_gender = #{userGender},
+        user_age = #{userAge},
+        user_phone = #{userPhone},
+        user_email = #{userEmail},
+        user_school = #{userSchool},
+        user_exp_study = #{userExpStudy},
+        user_exp = #{userExp},
+        user_introduce = #{userIntroduce}
+        where user_id = #{userId}
+    </update>
+    <update id="updatePassword">
+        update user set user_password = #{param2} where user_id = #{param1}
+    </update>
+    <delete id="deleteSelfExp">
+        delete from resume where work_id = #{param1} and user_id = #{param2}
+    </delete>
+    <select id="selectUserByPhoneAndPassword" resultMap="userResultExp">
+        select user_id, user_name,user_name2, user_password, user_picture, user_phone, user_email, user_age, user_gender, user_school,
+        user_exp_study, user_exp, user_introduce, user_file
+        from user
+        where user_name = #{userName} and user_password = #{userPassword}
+    </select>
+    <select id="selectUserOfPasswordById" resultType="java.lang.String">
+        select user_password from user where user_id = #{id}
+    </select>
+    <resultMap id="userResultExp" type="com.colin.bean.User">
+        <id property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userName2" column="user_name2"/>
+        <result property="userPassword" column="user_password"/>
+        <result property="userPicture" column="user_picture"/>
+        <result property="userPhone" column="user_phone"/>
+        <result property="userEmail" column="user_email"/>
+        <result property="userAge" column="user_age"/>
+        <result property="userGender" column="user_gender"/>
+        <result property="userSchool" column="user_school"/>
+        <result property="userExpStudy" column="user_exp_study"/>
+        <result property="userExp" column="user_exp"/>
+        <result property="userIntroduce" column="user_introduce"/>
+        <result property="userFile" column="user_file"/>
+    </resultMap>
+    <select id="selectUserExperienceById" resultMap="userResultExp">
+        select user_id, user_name,user_name2, user_password, user_picture, user_phone, user_email, user_age, user_gender, user_school,
+        user_exp_study, user_exp, user_introduce, user_file
+        from user
+        where user_id = #{id}
+    </select>
+    <resultMap id="resumeResult" type="com.colin.bean.Resume1">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="workId" column="work_id"/>
+        <result property="progress" column="progress"/>
+        <result property="companyName" column="company_name"/>
+        <result property="companyAddress" column="company_address"/>
+        <result property="workName" column="work_name"/>
+        <result property="workDetails" column="work_details"/>
+        <result property="workCity" column="work_city"/>
+        <result property="workSalary" column="attributedetailsname"/>
+        <result property="test" column="test"/>
+    </resultMap>
+    <select id="hitExperience" resultMap="resumeResult">
+        select r.id, r.user_id, r.work_id, r.progress, c.company_name, c.company_address,
+        w.work_name, w.work_details, w.work_city, a.attributedetailsname, r.test
+        from resume r
+        inner join work w on w.work_id = r.work_id
+        inner join attributedetails a on a.attributedetails_id = w.work_salaryID
+        left join company c on c.company_id = w.company_id
+        where r.user_id = #{id};
+    </select>
+    <select id="getWorkDetails" resultType="java.lang.String">
+        select work_details from work where work_id = #{id}
+    </select>
+
+
+    <select id="getInvatationDetails" resultType="java.lang.String">
+        select invitation_content from invitation where invitation_id = #{id}
+    </select>
+
+
+    <resultMap id="aResult" type="com.colin.bean.InterviewAnswer">
+        <id property="id" column="id"/>
+        <result property="question" column="interview_title"/>
+        <result property="answer" column="user_answer"/>
+        <result property="crrAnswer" column="interview_answer"/>
+    </resultMap>
+    <select id="getInterviewAnswer" resultMap="aResult">
+        select ia.id, i.interview_title, ia.user_answer,i.interview_answer
+        from interview_answer ia
+        inner join interview i on i.interview_id = ia.question_id
+        where ia.user_id = #{id}
+    </select>
+    <resultMap id="bResult" type="com.colin.bean.InterviewAnswer">
+        <id property="id" column="id"/>
+        <result property="question" column="write_title"/>
+        <result property="answer" column="user_answer"/>
+        <result property="crrAnswer" column="write_answer"/>
+    </resultMap>
+    <!--<select id="getWrritenAnswer" resultMap="bResult">-->
+        <!--select wa.id, w.write_title, wa.user_answer, w.write_answer-->
+        <!--from wrriten_answer wa-->
+        <!--inner join writing w on w.write_id = wa.question_id-->
+        <!--where wa.user_id = #{id}-->
+    <!--</select>-->
+    <select id="selectUserById" resultMap="userResultExp">
+        select *
+        from user
+        where user_id = #{id}
+    </select>
+    <select id="getInterviewTotalCount" resultType="java.lang.Integer">
+        select count(interview_id)
+        from interview
+        where interview_type_id = #{typeId}
+    </select>
+    <resultMap id="interviewResult" type="com.colin.bean.Interview">
+        <id property="interviewId" column="interview_id"/>
+        <result property="interviewTitle" column="interview_title"/>
+        <result property="interviewAnswer" column="interview_answer"/>
+        <result property="interviewType" column="type_name"/>
+    </resultMap>
+    <select id="selectAllInterview" resultMap="interviewResult">
+        select i.interview_id, i.interview_title, i.interview_answer, t.type_name
+        from interview i
+        inner join type1 t on t.type_id = i.interview_type_id
+        where i.interview_type_id = #{param3}
+        limit #{param1},#{param2}
+    </select>
+    <resultMap id="typeResult" type="com.colin.bean.Type1">
+        <id property="typeId" column="type_id"/>
+        <result property="typeName" column="type_name"/>
+    </resultMap>
+    <select id="selectTypeList" resultMap="typeResult">
+        select type_id, type_name
+        from type1
+    </select>
+    <select id="selectPasswordByUserName" resultType="java.lang.String">
+        select user_password from user where user_name = #{userName}
+    </select>
+</mapper>

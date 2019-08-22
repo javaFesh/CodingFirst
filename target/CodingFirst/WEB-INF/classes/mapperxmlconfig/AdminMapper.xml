@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.AdminMapper">
+    <insert id="adminAdd" parameterType="admin">
+       insert  into admin (admin_name, admin_password, admin_role) values (#{name},#{password},#{role})
+    </insert>
+    <delete id="deleteAdmin">
+        delete from admin where admin_id=#{id}
+    </delete>
+
+    <select id="selectAdmin" resultType="com.colin.bean.Admin">
+        select a.admin_id id,a.admin_name name, a.admin_password password,a.admin_role role
+        from admin a
+        where a.admin_password=#{password}
+        and  a.admin_name=#{name}
+
+    </select>
+    <select id="selectAllAdmin" resultType="com.colin.bean.Admin">
+        select a.admin_id id,a.admin_name name, a.admin_password password,a.admin_role role
+        from admin a
+    </select>
+</mapper>

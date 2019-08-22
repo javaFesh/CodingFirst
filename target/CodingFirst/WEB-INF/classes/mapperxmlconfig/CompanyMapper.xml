@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.CompanyMapper">
+    <resultMap id="companyResult" type="com.colin.bean.Company">
+        <id property="companyId" column="company_id"/>
+        <result property="companyName" column="company_name"/>
+        <result property="companyPassword" column="company_password"/>
+        <result property="companyPicture" column="company_picture"/>
+        <result property="companyPhone" column="company_phone"/>
+        <result property="companyEmail" column="company_email"/>
+        <result property="companyAddress" column="company_address"/>
+        <result property="companyIdentify" column="company_identify"/>
+        <result property="companyDescribe" column="company_describe"/>
+        <result property="companyState" column="company_state"/>
+    </resultMap>
+    <insert id="insertCompany">
+        insert into company values(null, #{companyName}, #{companyPassword}, #{companyPicture}, #{companyPhone}, #{companyEmail}, #{companyAddress}, #{companyIdentify}, #{companyDescribe}, 0, null, null)
+    </insert>
+    <update id="updateCompanyPassword">
+        update company
+        set company_password = #{param2}
+        where company_id = #{param1}
+    </update>
+    <update id="updateProcessForUser">
+        update resume set progress = 33 where id = #{resumeId}
+    </update>
+    <update id="updateCompanyState">
+        update company set company_state = 1 where company_id = #{companyId}
+    </update>
+    <update id="updateProcessForUser1">
+        update resume set progress = 34 where id = #{resumeId}
+    </update>
+    <update id="updateProcessForUser2">
+        update resume set progress = 35 where id = #{resumeId}
+    </update>
+    <update id="updateProcessForUser3">
+        update resume set test = '已被拒' where id = #{resumeId}
+    </update>
+    <select id="selectCompanyByPhoneAndPassword" resultMap="companyResult">
+        select company_id, company_name, company_password, company_picture, company_phone, company_email,
+        company_address, company_identify, company_describe, company_state
+        from company
+        where company_name = #{companyName} and company_password = #{companyPassword}
+    </select>
+    <select id="selectCompanyOfPasswordById" resultType="java.lang.String">
+        select company_password from company where company_id = #{id}
+    </select>
+    <select id="selectCompanyBiId" resultMap="companyResult">
+         select company_id, company_name, company_password, company_picture, company_phone, company_email,
+        company_address, company_identify, company_describe, company_state
+        from company
+        where company_id = #{id}
+    </select>
+
+    <resultMap id="companyWorksResult" type="com.colin.bean.CompanyWorks">
+        <id property="workId" column="work_id"/>
+        <result property="companyId" column="company_id"/>
+        <result property="workType" column="work_type"/>
+        <result property="workDetails" column="work_details"/>
+        <result property="workSalary" column="work_salary"/>
+        <result property="experience" column="experience"/>
+        <result property="degree" column="degree"/>
+        <result property="workPlace" column="workplace"/>
+        <result property="workName" column="work_name"/>
+        <result property="workNature" column="work_nature"/>
+        <result property="workDuty" column="work_duty"/>
+        <result property="workAsk" column="work_ask"/>
+        <result property="createTime" column="create_time"/>
+        <result property="workState" column="work_state"/>
+    </resultMap>
+    <select id="selectAllCompanyWorks" resultMap="companyWorksResult">
+        select w.work_id, a1.attributedetailsname work_type, w.work_details, a2.attributedetailsname work_salary,
+        a3.attributedetailsname experience, a4.attributedetailsname degree, w.workplace, w.work_name,w.company_id,
+        a5.attributedetailsname work_nature, w.work_duty, w.work_ask, w.create_time, w.work_state
+        from work w
+        inner join company c on c.company_id = w.company_id
+        inner join attributedetails a1 on a1.attributedetails_id = w.work_typeID
+        inner join attributedetails a2 on a2.attributedetails_id = w.work_salaryID
+        inner join attributedetails a3 on a3.attributedetails_id = w.experienceID
+        inner join attributedetails a4 on a4.attributedetails_id = w.degreeID
+        inner join attributedetails a5 on a5.attributedetails_id = w.work_natureID
+        where w.company_id = #{param3}
+        limit #{param1},#{param2}
+    </select>
+    <select id="getWorksTotalCount" resultType="java.lang.Integer">
+        select count(work_id) from work where company_id = #{id}
+    </select>
+    <select id="getResumesTotalCount" resultType="java.lang.Integer">
+        select count(u.user_id)
+        from user u
+        inner join resume r on r.user_id = u.user_id
+        inner join work w on w.work_id = r.work_id
+        where w.company_id = #{id}
+    </select>
+    <resultMap id="userResultExp2" type="com.colin.bean.User">
+        <id property="userId" column="user_id"/>
+        <result property="userName2" column="user_name2"/>
+        <result property="userPassword" column="user_password"/>
+        <result property="userPicture" column="user_picture"/>
+        <result property="userPhone" column="user_phone"/>
+        <result property="userEmail" column="user_email"/>
+        <result property="userAge" column="user_age"/>
+        <result property="userGender" column="user_gender"/>
+        <result property="userSchool" column="user_school"/>
+        <result property="userExpStudy" column="user_exp_study"/>
+        <result property="userExp" column="user_exp"/>
+        <result property="userIntroduce" column="user_introduce"/>
+        <result property="userFile" column="user_file"/>
+        <result property="workName" column="work_name"/>
+        <result property="workId" column="r_id"/>
+    </resultMap>
+    <select id="selectGetResumeFromUser" resultMap="userResultExp2">
+        select u.user_id, u.user_name2, u.user_password, u.user_picture, u.user_phone,
+           u.user_email, u.user_age, u.user_gender, u.user_school,
+           u.user_exp_study, u.user_exp, u.user_introduce, u.user_file,w.work_name,r.id r_id
+        from user u
+        inner join resume r on r.user_id = u.user_id
+        inner join work w on w.work_id = r.work_id
+        where w.company_id = #{param3} and r.test is NULL
+        limit #{param1},#{param2}
+    </select>
+    <select id="getCompanyTotalCount" resultType="java.lang.Integer">
+        select count(company_id) from company
+    </select>
+    <select id="selectAllCompany" resultMap="companyResult">
+        select company_id, company_name, company_password, company_picture, company_phone, company_email,
+        company_address, company_identify, company_describe, company_state
+        from company
+        where company_state = 0
+        limit #{param1},#{param2}
+    </select>
+    <select id="getResumesTotalCount2" resultType="java.lang.Integer">
+        select count(u.user_id)
+        from user u
+        inner join resume r on r.user_id = u.user_id
+        inner join work w on w.work_id = r.work_id
+        where w.company_id = #{id} and r.progress = 34
+    </select>
+    <!--<select id="selectDaiGouTong" resultMap="userResultExp2">-->
+        <!--select u.user_id, u.user_name2, u.user_password, u.user_picture, u.user_phone,-->
+           <!--u.user_email, u.user_age, u.user_gender, u.user_school,-->
+           <!--u.user_exp_study, u.user_exp, u.user_introduce, u.user_file,w.work_name,r.id r_id-->
+        <!--from user u-->
+        <!--inner join resume r on r.user_id = u.user_id-->
+        <!--inner join work w on w.work_id = r.work_id-->
+        <!--where w.company_id = #{param3} and r.progress = 34-->
+        <!--limit #{param1},#{param2}-->
+    <!--</select>-->
+</mapper>

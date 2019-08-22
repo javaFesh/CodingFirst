@@ -1,0 +1,73 @@
+
+
+#invitationTop{
+    margin: 0 auto;
+    margin-top: 60px;
+
+    width: 1100px;
+    height: 135px;
+}
+#publish{
+
+    height: 60px;
+    width: 800px;
+    background-color:#EAEAEA;
+
+}
+.publishTitle{
+    padding:15px 0;
+    font-weight: bolder;
+    color: #2d2d2d;
+    float: left;
+}
+#doPublish{
+    margin: 22px;
+    float: right;
+    /*width: 80px;*/
+    /*height: 28px;*/
+    /*border-radius: 2px;*/
+    /*background-color: #1eb37b;*/
+    color: white;
+    /*font-weight: bolder;*/
+    text-align: center;
+}
+
+#type{
+    padding: 10px;
+    width: 800px;
+    /*background-color: aliceblue;*/
+    background: #EAEAEA; !important;
+}
+
+#typeList{
+    /*margin: 5px;*/
+    /*padding: 2px 8px;*/
+    /*height: 28px;*/
+    /*width: 80px;*/
+    /*border-radius: 2px;*/
+    /*background-color: #1eb37b;*/
+    /*color: white;*/
+}
+#talkName{
+    font-size: 20px;
+}
+
+#talkMessage{
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#invitationBottom{
+    margin: 10px auto;
+    padding-top: 23px;
+    height: 100px;
+    width: 100%;
+    float: left;
+    background-color: #3d3d3d;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+
+}

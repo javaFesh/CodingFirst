@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.div1 {
+    width: 100%;
+    height: 400px;
+    background-color: #1eb37b;
+    /*background-image: url("../image/waijing.jpg");*/
+}
+.div1 > .registerContent{
+    width: 600px;
+    height: 400px;
+    background-color: #FFFEFA;
+    position: absolute;
+    top: 70px;
+    left: 30%;
+    border-top-right-radius: 80px;
+}
+
+.div1 > .registerContent > .spanOfUser {
+
+    font-size: 18px;
+    position: relative;
+    left: 19%;
+    top: 10px;
+    padding: 0px 7.5% 10px 7.5%;
+    color: #1eb37b;
+
+}
+.div1 > .registerContent > .spanOfUser:hover{
+    cursor: pointer;
+}
+.div1 > .registerContent > .spanOfCompony {
+    font-size: 18px;
+    position: relative;
+    left: 25%;
+    top: 10px;
+    margin-right: 15%;
+    padding: 0px 3.25% 10px 3.25%;
+    color: #969696;
+}
+.div1 > .registerContent > .spanOfCompony:hover{
+    cursor: pointer;
+}
+.div1 > .registerContent > .img1{
+    position: relative;
+    top: 13px;
+    left: 20%;
+}
+.div1 > .registerContent a {
+    text-decoration: none;
+    color: #969696;
+}
+.div1 > .registerContent > .form1{
+    position: relative;
+    top: 50px;
+    left: 15%;
+}
+
+.div1 > .registerContent > .form1 > input{
+    width: 250px;
+    height: 30px;
+    margin-bottom: 40px;
+    margin-left: 42px;
+
+}
+.div1 > .registerContent > .form1 > .form1span1{
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    font-size: 10px;
+    color: red;
+}
+.div1 > .registerContent > .form1 > .form1span2{
+    position: absolute;
+    top: 105px;
+    left: 40px;
+    font-size: 10px;
+    color: red;
+}
+.div1 > .registerContent > .form2{
+    position: relative;
+    top: -150px;
+    left: 15%;
+    visibility: hidden;
+    z-index: 0;
+}
+/*.div1 > .registerContent > .perImage{*/
+    /*visibility: hidden;*/
+    /*position: relative;*/
+    /*top: -240px;*/
+    /*left: 180px;*/
+/*}*/
+.div1 > .registerContent > .form2 > input{
+    width: 250px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-left: 42px;
+
+}
+.div1 > .registerContent > .form2 > .form2span1{
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    font-size: 10px;
+    color: red;
+}
+.div1 > .registerContent > .form2 > .form2span2{
+    position: absolute;
+    top: 105px;
+    left: 40px;
+    font-size: 10px;
+    color: red;
+}
+.div1 > .registerContent > .form2 > .bxx
+{
+    color: red;
+    font-size: 10px;
+    position: relative;
+    left: 300px;
+    top: -75px;
+}
+.div1 > .registerContent > .form2 > label > div{
+    width: 70px;
+    height: 25px;
+    position: relative;
+    left: 42px;
+    top: -50px;
+    background-color: #007aff;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 15px;
+}
+.div1 > .registerContent > .form2 > .imageFile{
+    /*background-color: #007aff;*/
+    color: #007aff;
+    border: 0px;
+}
+.form1span1, .form1span2, .form2span1, .form2span2, .form2span3{
+    display: none;
+}
+.div1 > .registerContent > .ShowDiv{
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    color: #1eb37b;
+    width: 150px;
+    height: 70px;
+    background-color: rgba(0,0,1,0.3);
+    border-radius: 20px;
+    text-align: left;
+    padding-top: 10px;
+    color: white;
+    font-family: "微软雅黑";
+    text-align: center;
+    z-index: 1;
+    visibility: hidden;
+}
+/*.div1 > .registerContent > .form1 > input[type = "reset"]{*/
+    /*width: 250px;*/
+    /*height: 30px;*/
+    /*margin-left: 40px;*/
+    /*margin-top: -20px;*/
+
+/*}*/
+.div1 > .registerContent > .quike{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 430px;
+    top: 200px;
+}
+.div1 > .registerContent > .quike > .quike_span1 {
+    font-size: 15px;
+    font-family: Arial;
+    color: #5F5F5F;
+}
+.div1 > .registerContent > .quike > .quike_span2 > a{
+    font-size: 15px;
+    font-family: Arial;
+    color: #1eb37b;
+}

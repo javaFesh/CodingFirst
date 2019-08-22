@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.WritingMapper">
+    <insert id="insertWriting" parameterType="writing">
+        insert into writing (write_title, write_answer, write_type_id, write_static) values
+        (#{title},#{answer},#{typeId},#{staticing})
+    </insert>
+
+    <update id="updateStatic" parameterType="writing">
+            update writing set write_static=#{staticing} where write_id=#{id}
+    </update>
+    <update id="updateWriting" parameterType="writing">
+        update writing  set  write_answer=#{answer} ,write_title=#{title} where  write_id=#{id}
+    </update>
+    <delete id="writingDelete">
+        delete  from writing where  write_id=#{id}
+    </delete>
+
+    <!--<select id="selectWriting" resultType="writing">-->
+    <!--select  w.write_id id,w.write_title title,w.write_answer answer,write_static staticing,w.write_type_id typeId-->
+    <!--from writing w ,type t-->
+    <!--where w.write_type_id=t.type_id and w.write_type_id=#{id}-->
+    <!--</select>-->
+    <select id="findTotalCount" parameterType="writing" resultType="java.lang.Integer">
+
+        select count(write_id) from writing
+        <where>
+            <if test="1==1">
+                write_type_id=#{typeId}
+            </if>
+            <if test="title!=null and title !=''">
+                and write_title like '%${title}%'
+            </if>
+
+        </where>
+    </select>
+    <select id="findByPage" resultType="com.colin.bean.Writing">
+
+        select w.write_id id,w.write_title title,w.write_answer answer,write_static staticing,w.write_type_id typeId
+        from writing w ,type t
+        <where>
+            <if test="1==1">
+                w.write_type_id=t.type_id
+            </if>
+            <if test="1==1">
+                and w.write_type_id=#{param3.typeId}
+            </if>
+            <if test="param3.title!=null and param3.title !=''">
+                and write_title like '%${param3.title}%'
+            </if>
+
+        </where>
+        limit #{param1},#{param2};
+    </select>
+    <select id="findTotalCountWriting" resultType="java.lang.Integer">
+        select count(*) from writing w ,type t where  w.write_type_id=t.type_id
+    </select>
+
+    <select id="findByPageWriting" parameterType="int" resultMap="myWriting">
+        select w.*,t.*
+        from writing w ,type t
+        <where>
+            <if test="1==1">
+                w.write_type_id=t.type_id
+            </if>
+            <if test="param3.title!=null and param3.title !=''">
+                and w.write_title like '%${param3.title}%'
+            </if>
+            <if test="param3.type!=null and param3.type !=''">
+                and t.type_name like '%${param3.type}%'
+            </if>
+
+        </where>
+        limit #{param1},#{param2};
+    </select>
+    <select id="findTotalCountWriting1" resultType="java.lang.Integer">
+        select count(write_id) from writing w ,type t
+        <where>
+            <if test="1==1">
+                w.write_type_id=t.type_id
+            </if>
+            <if test="title!=null and title !=''">
+                and w.write_title like '%${title}%'
+            </if>
+            <if test="type!=null and type !=''">
+                and t.type_name like '%${type}%'
+            </if>
+        </where>
+    </select>
+    <select id="selectWriting1" parameterType="int" resultMap="myWriting">
+        select t.* , w.* from writing w, type t
+        where
+        w.write_id=t.type_id
+         and
+         write_id=#{id}
+
+    </select>
+    <select id="selectWritingOne" parameterType="int" resultMap="myWriting">
+            SELECT w.* FROM  writing w
+             where w.write_type_id = #{id}
+            ORDER BY RAND() LIMIT 1
+
+    </select>
+    <resultMap id="myWriting" type="writing">
+        <id property="id" column="write_id"/>
+        <result property="title" column="write_title"/>
+        <result property="answer" column="write_answer"/>
+        <result property="staticing" column="write_static"/>
+        <result property="typeId" column="write_type_id"/>
+        <association property="typing" javaType="com.colin.bean.Type" column="write_type_id">
+            <id property="id" column="type_id"/>
+            <result property="type" column="type_name"/>
+            <result property="fatherType" column="father_type"/>
+        </association>
+    </resultMap>
+
+
+</mapper>

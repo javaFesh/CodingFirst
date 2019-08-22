@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.JobMapper">
+
+    <insert id="insert">
+        insert into work(user_id, company_id, work_typeID, work_details, work_salaryID, experienceID, degreeID,
+                         workplace, work_name, work_natureID, work_duty, work_ask, create_time, work_welfare, work_city)
+        values(#{userId}, #{companyId}, #{workTypeId}, #{workDetails}, #{workSalaryId}, #{experienceId}, #{degreeId},
+               #{workplace}, #{workName}, #{workNatureId}, #{workDuty}, #{workAsk}, #{createTime}, #{workWelfare}, #{workCity})
+    </insert>
+
+    <insert id="insertResume">
+        insert into resume(user_id, work_id, progress, test) values(#{param1}, #{param2}, 32, null)
+    </insert>
+
+    <update id="updateUserByUserFile">
+        update user set user_file = #{param2} where user_id = #{param1}
+    </update>
+
+    <select id="selectExperience" resultType="com.colin.bean.AttributeDetails">
+        select attributedetails_id as id, attributedetailsname as attributeDetailsName
+        from attributedetails
+        where attribute_id = 3
+    </select>
+
+    <select id="selectDegree" resultType="com.colin.bean.AttributeDetails">
+        select attributedetails_id as id, attributedetailsname as attributeDetailsName
+        from attributedetails
+        where attribute_id = 4
+    </select>
+
+    <select id="selectWorkType" resultType="com.colin.bean.AttributeDetails">
+        select attributedetails_id as id, attributedetailsname as attributeDetailsName
+        from attributedetails
+        where attribute_id = 1
+    </select>
+
+    <select id="selectWorkNature" resultType="com.colin.bean.AttributeDetails">
+        select attributedetails_id as id, attributedetailsname as attributeDetailsName
+        from attributedetails
+        where attribute_id = 5
+    </select>
+    <update id="updateById">
+        update work set work_state = '已审核' where work_id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        delete from work  where work_id = #{id}
+    </delete>
+    <select id="selectWorkSalary" resultType="com.colin.bean.AttributeDetails">
+        select attributedetails_id as id, attributedetailsname as attributeDetailsName
+        from attributedetails
+        where attribute_id = 2
+    </select>
+
+    <select id="selectCompanyByCompanyName" resultType="java.lang.Integer">
+        select company_id
+        from company
+        where company_name = #{companyName}
+    </select>
+
+    <select id="selectAllWorkCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+        where work_state = '已审核'
+    </select>
+
+    <select id="selectAllWork" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, cd.company_name as companyName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_state = '已审核'
+            limit #{param1}, #{param2}
+    </select>
+
+    <select id="selectAllWorkByWorkCityCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+        where work_state = '已审核' and work_city = #{workCity}
+    </select>
+
+    <select id="selectAllWorkByWorkCity" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_city as workCity,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, cd.company_name as companyName,
+               create_time as createTime, a.attributedetailsname as workTypeName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_state = '已审核' and work_city = #{param1}
+            limit #{param2}, #{param3}
+    </select>
+
+    <select id="selectWorkById" resultType="com.colin.bean.Work">
+        select company_email as companyEmail,work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, cd.company_picture as companyPicture,
+               cd.company_name as companyName, cd.company_address as companyAddress, cd.company_describe as companyDescribe,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_id = #{id}
+    </select>
+
+    <select id="selectAllCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+    </select>
+
+    <select id="selectAll" resultType="com.colin.bean.Work">
+        select work_id as id, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, work_state as workState,
+               cd.company_name as companyName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        order by createTime
+        limit #{param1}, #{param2}
+    </select>
+
+    <select id="selectWorkByWorkExperienceCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+        where work_state = '已审核' and experienceID = #{experienceId}
+    </select>
+
+    <select id="selectWorkByWorkExperience" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, cd.company_name as companyName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_state = '已审核' and experienceID = #{param1}
+            limit #{param2}, #{param3}
+    </select>
+
+    <select id="selectWorkByWorkDegreeCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+        where work_state = '已审核' and degreeID = #{degreeId}
+    </select>
+
+    <select id="selectWorkByWorkDegree" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, cd.company_name as companyName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_state = '已审核' and degreeID = #{param1}
+            limit #{param2}, #{param3}
+    </select>
+
+    <select id="selectWorkByWorkTypeCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+        where work_state = '已审核' and work_typeID = #{workTypeId}
+    </select>
+
+    <select id="selectWorkByWorkType" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, cd.company_name as companyName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_state = '已审核' and work_typeID = #{param1}
+            limit #{param2}, #{param3}
+    </select>
+
+    <select id="selectWorkByWorkNatureCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+        where work_state = '已审核' and work_natureID = #{workNatureId}
+    </select>
+
+    <select id="selectWorkByWorkNature" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, cd.company_name as companyName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_state = '已审核' and work_natureID = #{param1}
+            limit #{param2}, #{param3}
+    </select>
+
+    <select id="selectWorkByWorkSalaryCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+        where work_state = '已审核' and work_salaryID = #{workSalaryId}
+    </select>
+
+    <select id="selectWorkByWorkSalary" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, cd.company_name as companyName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_state = '已审核' and work_salaryID = #{param1}
+            limit #{param2}, #{param3}
+    </select>
+
+    <select id="selectWorkByWorkNameCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+        where work_state = '已审核' and work_name like '%${value}%'
+    </select>
+
+    <select id="selectWorkByWorkName" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, cd.company_name as companyName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_state = '已审核' and work_name like '%${param1}%'
+            limit #{param2}, #{param3}
+    </select>
+
+    <select id="selectWorkByCreateTime" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+               work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+               create_time as createTime, a.attributedetailsname as workTypeName, cd.company_name as companyName,
+               b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+               d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+                 left outer join company cd on cd.company_id = w.company_id
+                 left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+                 left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+                 left outer join attributedetails c on c.attributedetails_id = w.experienceID
+                 left outer join attributedetails d on d.attributedetails_id = w.degreeID
+                 left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        where work_state = '已审核'
+        order by createTime desc
+            limit #{param1}, #{param2}
+    </select>
+    <select id="selectByWorkEverythingCount" resultType="java.lang.Integer">
+        select count(*)
+        from work
+        <where>
+            work_state = '已审核'
+            <if test="param1 != null">
+                AND work_city =  #{param1}
+            </if>
+            <if test="param2 != null">
+                AND experienceID = #{param2}
+            </if>
+            <if test="param3 != null">
+                AND degreeID = #{param3}
+            </if>
+            <if test="param4 != null">
+                AND work_typeID = #{param4}
+            </if>
+            <if test="param5 != null">
+                AND work_natureID = #{param5}
+            </if>
+            <if test="param6 != null">
+                AND work_salaryID = #{param6}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectByWorkEverything" resultType="com.colin.bean.Work">
+        select work_id as id, user_id as userId, workplace, work_name as workName, work_details as workDetails,
+        work_duty as workDuty, work_ask as workAsk, work_welfare as workWelfare, work_city as workCity,
+        create_time as createTime, a.attributedetailsname as workTypeName, cd.company_name as companyName,
+        b.attributedetailsname as workSalaryName, c.attributedetailsname as experienceName,
+        d.attributedetailsname as degreeName, e.attributedetailsname as workNatureName
+        from work w
+        left outer join company cd on cd.company_id = w.company_id
+        left outer join attributedetails a on a.attributedetails_id = w.work_typeID
+        left outer join attributedetails b on b.attributedetails_id = w.work_salaryID
+        left outer join attributedetails c on c.attributedetails_id = w.experienceID
+        left outer join attributedetails d on d.attributedetails_id = w.degreeID
+        left outer join attributedetails e on e.attributedetails_id = w.work_natureID
+        <where>
+            work_state = '已审核'
+            <if test="param1 != null">
+                AND work_city =  #{param1}
+            </if>
+            <if test="param2 != null">
+                AND experienceID = #{param2}
+            </if>
+            <if test="param3 != null">
+                AND degreeID = #{param3}
+            </if>
+            <if test="param4 != null">
+                AND work_typeID = #{param4}
+            </if>
+            <if test="param5 != null">
+                AND work_natureID = #{param5}
+            </if>
+            <if test="param6 != null">
+                AND work_salaryID = #{param6}
+            </if>
+        </where>
+        limit #{param7}, #{param8}
+    </select>
+    <resultMap id="checkResumeResult" type="com.colin.bean.Resume">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="workId" column="work_id"/>
+        <result property="progress" column="progress"/>
+    </resultMap>
+    <select id="panDuan" resultMap="checkResumeResult">
+        select id, user_id, work_id, progress
+        from resume
+        where user_id = #{param1} and work_id = #{param2}
+    </select>
+
+</mapper>

@@ -1,0 +1,38 @@
+#body {
+    width: 1100px;
+    margin: 100px auto;
+    padding: 5px;
+
+}
+
+#title {
+    width: 1000px;
+    height: 100px;
+    padding: 20px 40px;
+    font-size: 25px;
+
+}
+#invitationMessage{
+    margin-top: 10px;
+    width: 900px;
+    font-size: 14px;
+    color: #666666;
+}
+
+#content {
+    width: 1000px;
+    padding: 20px 40px;
+
+}
+
+#comment {
+    width: 1000px;
+    padding: 10px 40px;
+
+}
+
+#add {
+    width: 1000px;
+    padding: 20px;
+
+}

@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    width: 100%;
+    height: 55px;
+    background-color: transparent !important;
+}
+.header > img {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: 5%;
+}
+.header .navbar_nav {
+    margin-left: 58%;
+    padding-top: 15px;
+}
+.header .navbar_nav li{
+    float:left;
+    position: relative;
+    display: block;
+}
+.header .navbar_nav li:after{
+    content: "";
+    width: 0;
+    /*height: 2px;*/
+    background: orangered;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+.header .navbar_nav li:hover:after{
+    width: 100%;
+}
+.header .navbar_nav li a{
+    text-decoration: none;
+    height: 100%;
+    padding: 0 25px;
+    display: block;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 16px;
+}
+.header .navbar_nav li:hover a{
+    color: orangered;
+}
+.header .navbar_nav li.dropdown{
+    display: inherit;
+    position: relative;
+}
+.header .navbar_nav li.dropdown .dropdown_menu{
+    display: none;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 15px 27px 0 rgba(167,165,165,0.38);
+    width: 120%;
+    left: -10%;
+}
+
+.header .navbar_nav li.dropdown .dropdown_menu a{
+    font-size: 14px;
+    color: #666;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 2px;
+}
+.header .navbar_nav li.dropdown:hover .dropdown_menu{
+    display: block;
+    background: #f3f3f3;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.header .navbar_nav li.dropdown:hover .dropdown_menu a{
+    color: #666;
+}
+.header .navbar_nav li.dropdown:hover .dropdown_menu a:hover{
+    color: #fff;
+    background: orange;
+}
+
+.ul1 {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    list-style: none;
+}
+.ul1 > li {
+    width: 140px;
+    height: 30px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    background-color: white;
+    text-align: center;
+}
+.ul1 > li > a {
+    text-decoration: none;
+    color: #494949;
+}
+.ul1 > span {
+    font-size: 30px;
+    color: #1eb37b;
+    position: relative;
+    top: -57px;
+    left: 130px;
+}
+.right {
+    width: 400px;
+    height: 270px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+}
+.right > .image {
+    width: 46px;
+    height: 47px;
+    border-radius: 25px;
+    /*background-color: #858585;*/
+    margin: 0 auto;
+    /*border: solid 1px black;*/
+    color: white;
+}
+.right > .userInform {
+    width: 160px;
+    height: 30px;
+    padding-top: 5px;
+}
+.right > form {
+    margin-top: 5px;
+}
+.right > form > label {
+    width: 55px;
+    height: 25px;
+    background-color: #343434;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    left: 42%;
+    padding: 3px;
+    z-index: 1;
+}
+.right > form > #imageFile {
+    /*visibility: hidden;*/
+    position: relative;
+    left: 25%;
+    z-index: 0;
+}
+.right > form > input[type = 'submit'], input[type = 'reset'] {
+    width: 70px;
+    height: 25px;
+    border: solid 1px #007aff;
+    border-radius: 5px;
+    background-color: #007aff;
+    color: white;
+    position: relative;
+    left: 42%;
+    top: 3px;
+}
+.right > .passwordForm > input{
+    width: 240px;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.right > .passwordForm > img {
+    position: absolute;
+    left: 69%;
+    width: 20px;
+    height: 10px;
+}
+.right > .passwordForm > label {
+    color: #3d3d3d;
+    font-family: Arial;
+    background-color: white;
+    position: relative;
+    left: 0;
+}
+
+
+
+/*.right > iframe {*/
+    /*width: 395px;*/
+    /*height: 395px;*/
+    /*margin: 2px;*/
+    /*background-color: #007aff;*/
+/*}*/

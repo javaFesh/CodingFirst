@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.colin.mapper.InvitationMapper">
+    <resultMap id="myInvitation" type="com.colin.bean.Invitation">
+        <id property="invitationId" column="invitation_id"/>
+        <result property="invitationTitle" column="invitation_title"/>
+        <result property="invitationCreateTime" column="invitation_create_time"/>
+        <result property="invitationContent" column="invitation_content"/>
+        <result property="invitationCommentNumber" column="invitation_comment_number"/>
+        <result property="invitationAgreeNumber" column="invitation_agree_number"/>
+        <result property="invitationPageView" column="invitation_page_view"/>
+        <association property="user" column="user_id" javaType="com.colin.bean.User">
+            <id property="userId" column="user_id"/>
+            <result property="userName" column="user_name"/>
+            <result property="userPassword" column="user_password"/>
+            <result property="userPicture" column="user_picture"/>
+            <result property="userPhone" column="user_phone"/>
+            <result property="userEmail" column="user_email"/>
+            <result property="userAge" column="user_age"/>
+            <result property="userSchool" column="user_school"/>
+            <result property="userExpStudy" column="user_exp_study"/>
+            <result property="userExp" column="user_exp"/>
+            <result property="userIntroduce" column="user_introduce"/>
+            <result property="userFile" column="user_file"/>
+        </association>
+        <association property="invitationType" column="invitation_type" javaType="com.colin.bean.InvitationType">
+            <id property="invitationTypeId" column="invitation_type_id"/>
+            <result property="invitationTypeName" column="invitation_type_name"/>
+        </association>
+    </resultMap>
+    <insert id="addInvitation" parameterType="com.colin.bean.Invitation">
+        insert into
+        invitation(invitation_title,user_id,invitation_create_time,invitation_content,invitation_type,invitation_comment_number,invitation_agree_number,invitation_page_view)
+        values(#{invitationTitle},#{user.userId},#{invitationCreateTime},#{invitationContent},#{invitationType.invitationTypeId},#{invitationCommentNumber},#{invitationAgreeNumber},#{invitationPageView})
+    </insert>
+    <update id="updateInvitationPageView">
+        update invitation set invitation_page_view = #{param1} where invitation_id = #{param2}
+    </update>
+    <update id="updateInvitationAgreeNumber">
+        update invitation set invitation_agree_number = #{param1} where invitation_id = #{param2}
+    </update>
+    <update id="updateInvitation" parameterType="com.colin.bean.Invitation">
+        update invitation
+        set invitation_title = #{invitationTitle},invitation_content = #{invitationContent},invitation_type = #{invitationType.invitationTypeId}
+        where invitation_id = #{invitationId}
+    </update>
+
+    <delete id="deleteInvitationById">
+        delete from invitation where invitation_id = #{id}
+    </delete>
+
+    <select id="selectAllInvitation" resultMap="myInvitation">
+    select
+    invitation_id,invitation_title,invitation.user_id,invitation_create_time,invitation_content,invitation_type,invitation_comment_number,invitation_agree_number,invitation_page_view,user.user_name,invitation_type.invitation_type_name
+    from invitation,user,invitation_type
+    where user.user_id = invitation.user_id and invitation.invitation_type = invitation_type.invitation_type_id
+    order by invitation_id
+    limit #{param1},#{param2}
+    </select>
+    <select id="selectInvitationById" resultMap="myInvitation">
+    select
+    invitation_id,invitation_title,invitation.user_id,invitation_create_time,invitation_content,invitation_type,invitation_comment_number,invitation_agree_number,invitation_page_view,user.user_name,invitation_type.invitation_type_name
+    from invitation,user,invitation_type
+    where user.user_id = invitation.user_id and invitation_id = #{id} and invitation.invitation_type = invitation_type.invitation_type_id
+    </select>
+    <select id="selectAllInvitationOrderByPageView" resultMap="myInvitation">
+    select
+    invitation_id,invitation_title,invitation.user_id,invitation_create_time,invitation_content,invitation_type,invitation_comment_number,invitation_agree_number,invitation_page_view,user.user_name,invitation_type.invitation_type_name
+    from invitation,user,invitation_type
+    where user.user_id = invitation.user_id and invitation.invitation_type = invitation_type.invitation_type_id
+    order by invitation.invitation_page_view desc limit 0,10
+    </select>
+    <select id="selectInvitationByType" resultMap="myInvitation">
+       select
+    invitation_id,invitation_title,invitation.user_id,invitation_create_time,invitation_content,invitation_type,invitation_comment_number,invitation_agree_number,invitation_page_view,user.user_name,invitation_type.invitation_type_name
+    from invitation,user,invitation_type
+    where user.user_id = invitation.user_id and invitation.invitation_type = invitation_type.invitation_type_id and invitation.invitation_type = #{param3}
+    order by invitation_id
+    limit #{param1},#{param2}
+    </select>
+    <select id="selectInvitationByKey" resultMap="myInvitation">
+        select
+        invitation_id,invitation_title,invitation.user_id,invitation_create_time,invitation_content,invitation_type,invitation_comment_number,invitation_agree_number,invitation_page_view,user.user_name,invitation_type.invitation_type_name
+        from invitation,user,invitation_type
+        <where>
+            user.user_id = invitation.user_id and invitation.invitation_type = invitation_type.invitation_type_id and
+            invitation.invitation_title like CONCAT(CONCAT('%',#{param3},'%'))
+        </where>
+        order by invitation_id
+        limit #{param1},#{param2}
+    </select>
+    <select id="selectAllInvitationCount" resultType="java.lang.Integer">
+        select count(*) from invitation
+    </select>
+    <select id="selectInvitationByUser" resultMap="myInvitation">
+        select
+    invitation_id,invitation_title,invitation.user_id,invitation_create_time,invitation_content,invitation_type,invitation_comment_number,invitation_agree_number,invitation_page_view,user.user_name,invitation_type.invitation_type_name
+    from invitation,user,invitation_type
+    where invitation.user_id = #{param3} and user.user_id = #{param3} and user.user_id = invitation.user_id and invitation.invitation_type = invitation_type.invitation_type_id
+    order by invitation_id
+    limit #{param1},#{param2}
+    </select>
+    <select id="selectTotalCountByUserId" resultType="java.lang.Integer">
+        select count(*) from invitation where user_id = #{userId}
+    </select>
+    <select id="selectTotalCountByKey" resultType="java.lang.Integer">
+        select count(*) from invitation where invitation_title like CONCAT(CONCAT('%',#{key},'%'))
+    </select>
+    <select id="selectTotalCountByType" resultType="java.lang.Integer">
+        select count(*) from invitation where invitation_type = #{invitationTypeId}
+    </select>
+    <update id="updateInvitationCommentNumber">
+        update invitation set invitation_comment_number = #{param1} where invitation_id = #{param2}
+    </update>
+</mapper>
