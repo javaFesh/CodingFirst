@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fjut.oj.edu.dao.ReplyreplyDao" >
+
+
+  <select id="queryAll" resultType="com.fjut.oj.edu.model.Replyreply" parameterType="java.lang.Integer">
+    select t_replyreply.*,t_users.nick from t_replyreply,t_users where t_replyreply.userId=t_users.userId
+    and t_replyreply.replyId=#{replyId} and t_replyreply.discussId=#{discussId}
+</select>
+  <select id="insert"  parameterType="com.fjut.oj.edu.model.Replyreply">
+    insert into t_replyreply values(NULL ,#{Replyreply.replyId},#{Replyreply.discussId},#{Replyreply.userId},#{replyTime},#{replyText})
+  </select>
+  <select id="ReplyReplyNum" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+    select count(*) from t_replyreply where t_replyreply.discussId=#{discussid} and t_replyreply.replyId=#{replyId};
+  </select>
+
+
+
+</mapper>

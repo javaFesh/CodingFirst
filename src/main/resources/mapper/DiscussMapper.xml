@@ -4,10 +4,14 @@
 
 
   <select id="queryByAll" resultType="com.fjut.oj.edu.model.Discuss">
-    select * from t_discuss
+    SELECT t_discuss.*,t_users.nick from t_discuss,t_users where t_discuss.userId=t_users.userId
 </select>
   <select id="insert"  parameterType="com.fjut.oj.edu.model.Discuss">
-    insert into t_discuss values(NULL ,#{Discuss.discussTitle},#{Discuss.discussTime},#{Discuss.userId},#{Discuss.discussDacb})
+    insert into t_discuss values(NULL ,#{Discuss.discussTitle},#{Discuss.discussText},#{Discuss.discussTime},#{Discuss.userId})
+  </select>
+
+  <select id="TotalRecord" resultType="java.lang.Integer">
+    select count(*) from t_discuss
   </select>
 
 

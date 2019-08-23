@@ -29,17 +29,18 @@
     };
     function sub() {
 
-        var json1 = $('#form1').serializeObject();
+        var user = $('#form1').serializeObject();
+        console.log(user);
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/stuLogin",
+            url: "Login/stuLogin",
             dataType: "json",
-            data: json1,
+            data: {"nick":user.nick,"pwd":user.pwd},
             traditional: true,
             xhrFields: {
-                withCredentials: true //session id 保持不变
+                withCredentials: true
             },
-            success: function (tt) {
+            success: function (data) {
 
                 alert("成功");
             },

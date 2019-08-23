@@ -16,7 +16,7 @@ public class Discussreply  {
 
     private Integer replyId;//回复ID
 
-    private Discuss discussId;//被回复讨论ID
+    private Integer discussId;//被回复讨论ID
 
     public Date getReplyTime() {
         return replyTime;
@@ -50,11 +50,12 @@ public class Discussreply  {
         this.replyId = replyId;
     }
 
-    public Discuss getDiscussId() {
+    public Integer getDiscussId() {
         return discussId;
     }
 
-    public void setDiscussId(Discuss discussId) {
+    public void setDiscussId(Integer discussId) {
         this.discussId = discussId;
     }
+
 }

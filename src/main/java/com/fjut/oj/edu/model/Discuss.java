@@ -14,7 +14,7 @@ public class Discuss {
 
     private Integer discussAuthor;//讨论发起人
 
-    private Integer discussdAcb;//悬赏的ACB
+    private String discussText;//讨论的内容
 
     public Integer getDiscussId() {
         return discussId;
@@ -48,11 +48,11 @@ public class Discuss {
         this.discussAuthor = discussAuthor;
     }
 
-    public Integer getDiscussdAcb() {
-        return discussdAcb;
+    public String getDiscussText() {
+        return discussText;
     }
 
-    public void setDiscussdAcb(Integer discussdAcb) {
-        this.discussdAcb = discussdAcb;
+    public void setDiscussText(String discussText) {
+        this.discussText = discussText;
     }
 }
