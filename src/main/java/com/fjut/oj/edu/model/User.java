@@ -31,8 +31,25 @@ public class User {
 
     private Integer acnum;//通过的题目数
 
+       public User() {
+    }
 
-
+    public User(Integer userId, String userPwd, String nick, String userimg, String gender, String school, String email, String motto, Date registertime, Integer type, Integer acb, String name, String phone, Integer acnum) {
+        this.userId = userId;
+        this.userPwd = userPwd;
+        this.nick = nick;
+        this.userimg = userimg;
+        this.gender = gender;
+        this.school = school;
+        this.email = email;
+        this.motto = motto;
+        this.registertime = registertime;
+        this.type = type;
+        this.acb = acb;
+        this.name = name;
+        this.phone = phone;
+        this.acnum = acnum;
+    }
 
     public String getUserimg() {
         return userimg;

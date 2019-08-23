@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fjut.oj.edu.dao.OrderDao">
+<!--   //添加订单
+    Boolean insertOrder(Order order);
+
+    //根据用户Id查询订单
+    List<Order> findAllOrderByIdByPage(RowBounds rowBounds,Integer userId);
+
+    //修改订单
+    Boolean updataOrder(Order order);
+
+
+    //删除订单（）
+    Boolean deleteOrder(Integer orderId);-->
+
+
+
+
+    <select id="findAllOrderByIdByPage" resultType="com.fjut.oj.edu.model.Order">
+    select * from  t_order where orderId=#{orderId}
+    </select>
+
+    <!-- private Integer orderId;//账单ID递增
+    private Integer userId;//用户名
+    private Integer goodsId;//商品ID
+    private Integer acb;//acv
+    private Integer rmb;//
+    private Date time;//账单时间
+    private Integer isCancel;//是否取消-->
+    <update id="updataOrder" parameterType="com.fjut.oj.edu.model.Order">
+        update t_mall set isCancel = #{isCancel}
+               where orderId = #{orderId} and userId=#{userId}
+    </update>
+
+</mapper>

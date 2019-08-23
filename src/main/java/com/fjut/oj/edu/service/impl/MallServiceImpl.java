@@ -26,6 +26,19 @@ public class MallServiceImpl implements MallService {
     @Override
     public List<Mall> findAllByPage(int pageNum) {
         //每页十条，可调整
-        return mallDao.findAllByPage(new RowBounds( (pageNum-1)*10,10));
+        int pageSize=10;
+        return mallDao.findAllByPage(new RowBounds( (pageNum-1)*pageSize,pageSize));
+    }
+
+    @Override
+    public Boolean addMall(Mall mall) {
+        if (mall.getEndTime()!=null&&mall.getMallTitle()!=null&&mall.getAcb()!=null&&mall.getMallAccount()!=null)
+        return mallDao.insertMall(mall);
+        else return false;
+    }
+
+    @Override
+    public Boolean deleteMall(Integer mallId) {
+        return mallDao.deleteMallById(mallId);
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface OrderDao {
     //添加订单
-    Boolean insertOrder();
+    Boolean insertOrder(Order order);
 
     //根据用户Id查询订单
     List<Order> findAllOrderByIdByPage(RowBounds rowBounds,Integer userId);
@@ -16,6 +16,8 @@ public interface OrderDao {
     Boolean updataOrder(Order order);
 
 
+    //删除订单（）
+    Boolean deleteOrder(Integer orderId);
 
 
 

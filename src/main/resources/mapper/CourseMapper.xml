@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fjut.oj.edu.dao.CourseDao">
+
+<!--//添加课程信息
+    Boolean insertCourse(Course course);
+
+    //查询所有有效购买时间课程信息
+    List<Course> findAllCourse(RowBounds rowBounds);
+    //按照ID查询课程信息
+    Course findCourseById(Integer courseId);
+
+    //查询所有过期课程信息
+    List<Course> findAllCourseBad(RowBounds rowBounds);
+
+    //删除课程信息
+    Boolean deleteCourse(Integer courserId);
+
+    //按照教师查询
+
+    List<Course> findAllCourseByTer(RowBounds rowBounds,Integer teacherId);-->
+
+
+
+    <select id="findAllCourse" resultType="com.fjut.oj.edu.model.Course">
+    select * from t_course
+    where  courseStartTime &lt;   now() and courseEndTime &gt; now()
+    </select>
+
+
+    <select id="findAllCourseBad" resultType="com.fjut.oj.edu.model.Course">
+        select * from t_course where courseStartTime &gt; now() or courseEndTime &lt; now()
+    </select>
+
+<!--//删除课程信息
+    Boolean deleteCourse();-->
+
+    <delete id="deleteCourse">
+        delete from t_course where courseId=#{courseId};
+    </delete>
+
+
+    <!--//按照教师查询
+
+    List<Course> findAllCourseByTer();-->
+    <select id="findAllCourseByTer" resultType="com.fjut.oj.edu.model.Course">
+        select * from t_course where teacherId =#{tercherId}
+    </select>
+
+<!--private String courseName;//课程名称
+
+    private String courseIntroduction;//课程介绍
+
+    private String courseImg;//课程图片
+
+    private Integer courseLength;//课程节数
+
+    private Date courseStartTime;//课程开始时间
+
+    private Date courseEndTime;//课程结束时间
+
+    private Integer teacherId;
+
+    private Double courseCharge;//课程价格-->
+
+    <!--//添加课程信息
+    Boolean insertCourse(Course course);-->
+    <insert id="insertCourse" parameterType="com.fjut.oj.edu.model.Course">
+        insert into t_course (courseName,courseIntroduction,courseImg,courseLength,courseStartTime,courseEndTime,teacherId,courseCharge)
+        values(#{courseName},#{courseIntroduction},#{courseImg},#{courseLength},#{courseStartTime},#{courseEndTime},#{teacherId},#{courseCharge})
+    </insert>
+
+
+
+    <select id="findCourseById" resultType="com.fjut.oj.edu.model.Course">
+        select * from t_course where courseId =#{courseId}
+    </select>
+
+</mapper>
