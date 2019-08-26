@@ -18,7 +18,11 @@ public interface CollectDao {
     Boolean deleteCollect(Integer collectId);
     //查看个人收藏
     List<Collect> findMyCollect(Integer userId);
-    //查看个人收藏中的内容
+
+    //查看某个收藏
+    Collect findMyCollectById(Integer userId);
+
+
 
 
 }

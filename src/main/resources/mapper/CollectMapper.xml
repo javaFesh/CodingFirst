@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fjut.oj.edu.dao.CollectDao">
+<!--//添加收藏
+    Boolean insertCollect(Collect collect);
+
+    //删除收藏
+    Boolean deleteCollect(Integer collectId);
+    //查看个人收藏
+    List<Collect> findMyCollect(Integer userId);
+-->
+<!--private Integer collectId;//收藏ID
+
+    private String userId;//用户ID
+
+    private Integer problemId; //问题ID
+
+    private Integer courseId;//课程ID
+
+    private Integer discussId;//讨论区ID-->
+<!--添加-->
+    <insert id="insertCollect" parameterType="com.fjut.oj.edu.model.Collect">
+        INSERT into t_collect (userId,problemId,courseId,discussId) values (#{userId},#{problemId},#{courseId},#{discussId})
+    </insert>
+
+    <!--删除-->
+    <delete id="deleteCollect" parameterType="java.lang.Integer">
+    delete from t_collect where collectId=#{collectId}
+</delete>
+
+    <!--查看-->
+    <select id="findMyCollect" resultType="com.fjut.oj.edu.model.Collect">
+        select * from t_collect where userId=#{userId}
+
+    </select>
+
+    <select id="findMyCollectById" resultType="com.fjut.oj.edu.model.Collect">
+        select * from t_collect where collectId=#{collectId}
+
+    </select>
+</mapper>
