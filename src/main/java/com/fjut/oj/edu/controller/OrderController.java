@@ -102,7 +102,7 @@ public Integer AllOrderPayAccount(@SessionAttribute(value = "user") User user){
 }
 
     //查看所有个人已付款订单订单
-    @RequestMapping("findOrderOnPay/index{pageNum}")
+    @RequestMapping("findAllOrderPayByPage/index{pageNum}")
     @ResponseBody
     public List<Order> findAllOrderPayByPage(@SessionAttribute(value = "user") User user,@PathVariable(value="pageNum")Integer pageNum) {
         List<Order> orders = orderService.findAllOrderPayByPage(pageNum, user.getUserId());
@@ -120,7 +120,7 @@ public Integer AllOrderPayAccount(@SessionAttribute(value = "user") User user){
     }
 
     //查看所有个人已付款课程
-    @RequestMapping("findOrderOnPay/index{pageNum}")
+    @RequestMapping("findAllOrderPayCourse/index{pageNum}")
     @ResponseBody
     public List<Course> findAllOrderPayCourse(@SessionAttribute(value = "user") User user,@PathVariable(value="pageNum")Integer pageNum) {
         List<Course> courses = orderService.findAllOrderPayCourse(pageNum, user.getUserId());

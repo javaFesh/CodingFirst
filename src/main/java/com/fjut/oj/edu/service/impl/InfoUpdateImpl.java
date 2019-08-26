@@ -5,9 +5,10 @@ import com.fjut.oj.edu.dao.UsersDao;
 import com.fjut.oj.edu.model.Teacher;
 import com.fjut.oj.edu.model.User;
 import com.fjut.oj.edu.service.InfoUpdateService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-
+@Service
 public class InfoUpdateImpl implements InfoUpdateService {
     @Resource
     UsersDao usersDao;

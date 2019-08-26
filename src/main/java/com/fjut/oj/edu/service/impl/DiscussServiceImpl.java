@@ -3,10 +3,11 @@ package com.fjut.oj.edu.service.impl;
 import com.fjut.oj.edu.dao.DiscussDao;
 import com.fjut.oj.edu.model.Discuss;
 import com.fjut.oj.edu.service.DiscussService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-
+@Service
 public class DiscussServiceImpl implements DiscussService {
     @Resource
     DiscussDao discussDao;
