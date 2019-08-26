@@ -21,8 +21,4 @@ public interface CollectDao {
 
     //查看某个收藏
     Collect findMyCollectById(Integer userId);
-
-
-
-
 }

@@ -9,7 +9,7 @@ public class Teacher {
 
     private String nick;
 
-    private Integer gender;
+    private String gender;
 
     private String school;
 
@@ -47,11 +47,11 @@ public class Teacher {
         this.nick = nick == null ? null : nick.trim();
     }
 
-    public Integer getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Integer gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
