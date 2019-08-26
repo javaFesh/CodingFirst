@@ -17,6 +17,10 @@
   <select id="selectNick" resultType="com.fjut.oj.edu.model.Teacher" parameterType="java.lang.String">
     select * from t_teacher where nick=#{nick}
   </select>
+  <select id="updateTeacher" parameterType="com.fjut.oj.edu.model.Teacher">
+    update t_teacher set teacherPwd=#{teacherPwd},nick=#{nick},gender=#{gender},
+    school=#{school},Email=#{email},motto=#{motto},name=#{name},phone=#{phone} where teacherId=#{teacherId}
+  </select>
 
 
 </mapper>

@@ -18,5 +18,10 @@
     select * from t_users where nick=#{nick}
   </select>
 
+  <select id="UpdateById" parameterType="com.fjut.oj.edu.model.User">
+    update t_users set userPwd=#{userPwd},nick=#{nick},gender=#{gender},school=#{school},
+    Email=#{email},motto=#{motto},name=#{name}, phone=#{phone},userImg=#{userimg} where userId=#{userId}
+  </select>
+
 
 </mapper>

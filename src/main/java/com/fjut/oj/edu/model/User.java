@@ -9,8 +9,8 @@ public class User {
 
     private String nick;//用户昵称
 
-
     private String userimg;//用户头像
+
     private String gender;//用户性别
 
     private String school;//学校
