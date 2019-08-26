@@ -7,11 +7,11 @@
     select * from t_users
 </select>
   <select id="insert" resultType="com.fjut.oj.edu.model.User" parameterType="com.fjut.oj.edu.model.User">
-    insert into t_users values(NULL,#{User.userPwd},#{User.nick},NULL,NULL,NULL,NULL,#{User.registertime},NULL ,NULL,NULL,NULL,NULL)
+    insert into t_users values(NULL,#{userPwd},#{nick},NULL,NULL,NULL,NULL,#{registertime},NULL ,NULL,NULL,NULL,NULL)
   </select>
 
   <select id="queryById" resultType="com.fjut.oj.edu.model.User" parameterType="com.fjut.oj.edu.model.User">
-    select * from t_users where nick=#{User.nick}   and userPwd=#{User.userPwd}
+    select * from t_users where nick=#{nick}   and userPwd=#{userPwd}
     </select>
 
   <select id="selectNick" resultType="com.fjut.oj.edu.model.User" parameterType="java.lang.String">

@@ -8,7 +8,7 @@
     and t_replyreply.replyId=#{replyId} and t_replyreply.discussId=#{discussId}
 </select>
   <select id="insert"  parameterType="com.fjut.oj.edu.model.Replyreply">
-    insert into t_replyreply values(NULL ,#{replyId},#{discussId},#{userId},#{replyTime},#{replyText})
+    insert into t_replyreply values(NULL ,#{Replyreply.replyId},#{Replyreply.discussId},#{Replyreply.userId},#{replyTime},#{replyText})
   </select>
   <select id="ReplyReplyNum" resultType="java.lang.Integer" parameterType="java.lang.Integer">
     select count(*) from t_replyreply where t_replyreply.discussId=#{discussid} and t_replyreply.replyId=#{replyId};

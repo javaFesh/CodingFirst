@@ -16,6 +16,16 @@ public class Discuss {
 
     private String discussText;//讨论的内容
 
+    private Integer type;
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public Integer getType(){
+        return type;
+    }
+
     public Integer getDiscussId() {
         return discussId;
     }

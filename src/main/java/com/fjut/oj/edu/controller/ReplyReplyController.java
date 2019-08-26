@@ -1,7 +1,6 @@
 package com.fjut.oj.edu.controller;
 
 
-import com.fjut.oj.edu.model.Discussreply;
 import com.fjut.oj.edu.model.Replyreply;
 import com.fjut.oj.edu.service.ReplyreplyService;
 import org.springframework.stereotype.Controller;

@@ -2,13 +2,18 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
            http://www.springframework.org/schema/context
-           http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/tx
+		   http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 <!--  组件扫描  -->
     <context:component-scan base-package="com.fjut.oj.edu"/>
+
+
 
 
     <!--1、配置数据库相关参数-->
@@ -36,7 +41,6 @@
         <property name="dataSource" ref="dataSource"/>
         <!--扫描sql配置文件:mapper需要的xml文件-->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
-        <property name="typeAliasesPackage" value="com.fjut.oj.edu.model.User"></property>
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
@@ -56,5 +60,17 @@
     <context:component-scan base-package="com.fjut.oj.edu.service"/>
 
 
+    <!-- 配置管理datasource 事务管理对象 -->
+    <bean id="dstmanager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
 
+
+    <!-- 配置实现事务的bean -->
+    <tx:annotation-driven transaction-manager="dstmanager"/>
+
+    <!-- 工具类  JdbcTemple    将上面配置的dataSource注入到该工具类中-->
+    <bean id="myjdbc" class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg index="0" ref="dataSource"></constructor-arg>
+    </bean>
 </beans>

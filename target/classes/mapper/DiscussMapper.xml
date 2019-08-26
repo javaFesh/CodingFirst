@@ -7,7 +7,7 @@
     SELECT t_discuss.*,t_users.nick from t_discuss,t_users where t_discuss.userId=t_users.userId and t_discuss.type=0
 </select>
   <select id="insert"  parameterType="com.fjut.oj.edu.model.Discuss">
-    insert into t_discuss values(NULL ,#{discussTitle},#{discussText},#{discussTime},#{userId},#{type})
+    insert into t_discuss values(NULL ,#{Discuss.discussTitle},#{Discuss.discussText},#{Discuss.discussTime},#{Discuss.userId},#{Discuss.type})
   </select>
 
   <select id="TotalRecord" resultType="java.lang.Integer">

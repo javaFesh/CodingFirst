@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fjut.oj.edu.dao.ProblemDao" >
+
+
+  <select id="queryAll" resultType="com.fjut.oj.edu.model.Problem" >
+    select t_problem.*,t_problem_tag.p_tagName from t_problem,t_problem_tag WHERE t_problem.problemType=t_problem_tag.p_tagId
+</select>
+  <select id="queryByTag" resultType="com.fjut.oj.edu.model.Problem" parameterType="com.fjut.oj.edu.model.ProblemTag">
+    select t_problem.*,t_problem_tag.p_tagName from t_problem,t_problem_tag WHERE t_problem.problemType=#{ProblemTag.pTagId}
+  </select>
+  <select id="queryById"  parameterType="java.lang.Integer">
+   select t_problem.*,t_problem_tag.p_tagName from t_problem,t_problem_tag WHERE t_problem.problemType=t_problem_tag.p_tagId and
+   t_problem.problemId=#{id}
+  </select>
+  <select id="ProblemNum" resultType="java.lang.Integer">
+    select count(*) from t_problem;
+  </select>
+  <select id="Add" parameterType="com.fjut.oj.edu.model.Problem">
+    insert into t_problem values(NULL ,#{Problem.problemType},#{Problem.problemTitle},#{Problem.problemAward},#{Problem.problemAuthor},#{Problem.Owner},NULL ,#{Problem.problemAns},#{Problem.problemAnalysis})
+  </select>
+
+
+
+</mapper>

@@ -38,6 +38,7 @@ public class DiscussController {
         discuss.setDiscussAuthor(Integer.parseInt(discussAuthor));
         discuss.setDiscussText(discussText);
         discuss.setDiscussTime(new Date());
+        discuss.setType(0);
         discussService.Add(discuss);
         Map<String ,Object> result=new HashMap<>();
         result.put("AddInfo","发布成功!");
