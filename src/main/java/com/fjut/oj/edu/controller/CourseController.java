@@ -147,8 +147,7 @@ public class CourseController {
         String chapterName=request.getParameter("chapterName");//章节名
         String chapterIntroductions=request.getParameter("chapterIntroductions");//章节描述
         String chapterResource=request.getParameter("chapterResource");//章节资源
-
-        Chapter chapter=new Chapter();
+        Chapter chapter=new Chapter(chapterId,chapterId,chapterName,chapterIntroductions,chapterResource);
         String myFilePath = null;// 文件保存到数据库的路径
         if (!myfile.isEmpty()) {// 图片有上传
             // 读取uploads的真实路径
