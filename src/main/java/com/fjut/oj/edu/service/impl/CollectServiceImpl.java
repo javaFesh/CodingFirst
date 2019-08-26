@@ -44,13 +44,17 @@ public class CollectServiceImpl implements CollectService {
     /**
      * 删除收藏
      *
-     * @param collectId
+     * @param userId
+     * @param couresId
+     * @param discussId
+     * @param
      * @return
      */
     @Override
-    public Boolean deleteCollect(Integer collectId) {
-        return collectDao.deleteCollect(collectId);
+    public Boolean deleteCollect(Integer userId, Integer couresId, Integer discussId, Integer problemId) {
+        return collectDao.deleteCollect(userId,couresId,discussId,problemId);
     }
+
 
     /**
      * 查看个人收藏
@@ -94,8 +98,7 @@ public class CollectServiceImpl implements CollectService {
     }
 
     /**
-     * 查看某个收藏
-     *
+     * 查看某个收藏（无用）
      * @param collectId
      * @return
      */
@@ -105,8 +108,7 @@ public class CollectServiceImpl implements CollectService {
     }
 
     /**
-     * 提取某个个人收藏真实内容
-     *
+     * 提取某个个人收藏真实内容（无用）
      * @param collectId
      * @return
      */

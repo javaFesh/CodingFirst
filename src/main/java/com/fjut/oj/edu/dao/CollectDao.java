@@ -15,7 +15,7 @@ public interface CollectDao {
     Boolean insertCollect(Collect collect);
 
     //删除收藏
-    Boolean deleteCollect(Integer collectId);
+    Boolean deleteCollect( Integer userId,Integer couresId,Integer discussId,Integer problemId);
     //查看个人收藏
     List<Collect> findMyCollect(Integer userId);
 

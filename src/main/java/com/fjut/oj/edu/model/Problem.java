@@ -3,15 +3,13 @@ package com.fjut.oj.edu.model;
 public class Problem {
     private Integer problemId;//题目ID
 
-    private Integer problemType;//题目类型
+    private String problemType;//题目类型
 
     private String problemTitle;//题目标题
 
     private Integer problemAward;//题目完成积分
 
-    private Integer problemAuthor;//题目作者
-
-    private Integer problemOwner;//题目所有者
+    private String problemAuthor;//题目作者
 
     private Integer discussId;//讨论区Id（创建题目的同时建立讨论区两者绑定）
 
@@ -27,11 +25,11 @@ public class Problem {
         this.problemId = problemId;
     }
 
-    public Integer getProblemType() {
+    public String getProblemType() {
         return problemType;
     }
 
-    public void setProblemType(Integer problemType) {
+    public void setProblemType(String problemType) {
         this.problemType = problemType;
     }
 
@@ -51,20 +49,12 @@ public class Problem {
         this.problemAward = problemAward;
     }
 
-    public Integer getProblemAuthor() {
+    public String getProblemAuthor() {
         return problemAuthor;
     }
 
-    public void setProblemAuthor(Integer problemAuthor) {
+    public void setProblemAuthor(String problemAuthor) {
         this.problemAuthor = problemAuthor;
-    }
-
-    public Integer getProblemOwner() {
-        return problemOwner;
-    }
-
-    public void setProblemOwner(Integer problemOwner) {
-        this.problemOwner = problemOwner;
     }
 
     public Integer getDiscussId() {
