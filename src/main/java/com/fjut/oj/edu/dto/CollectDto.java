@@ -3,9 +3,8 @@ package com.fjut.oj.edu.dto;
 import java.util.List;
 
 public class CollectDto {
-    private Integer collectId;//收藏ID
 
-    private String userId;//用户ID
+    private Integer userId;//用户ID
 
     private List<Integer> problemIds; //问题ID
 
@@ -17,34 +16,18 @@ public class CollectDto {
     public CollectDto() {
     }
 
-    public CollectDto(String userId, List<Integer> problemIds, List<Integer> courseIds, List<Integer> discussIds) {
+    public CollectDto(Integer userId, List<Integer> problemIds, List<Integer> courseIds, List<Integer> discussIds) {
         this.userId = userId;
         this.problemIds = problemIds;
         this.courseIds = courseIds;
         this.discussIds = discussIds;
     }
 
-    public CollectDto(Integer collectId, String userId, List<Integer> problemIds, List<Integer> courseIds, List<Integer> discussIds) {
-        this.collectId = collectId;
-        this.userId = userId;
-        this.problemIds = problemIds;
-        this.courseIds = courseIds;
-        this.discussIds = discussIds;
-    }
-
-    public Integer getCollectId() {
-        return collectId;
-    }
-
-    public void setCollectId(Integer collectId) {
-        this.collectId = collectId;
-    }
-
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

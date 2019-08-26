@@ -7,47 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="975e6f42-aa9b-4474-871c-fec66740b06c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/DiscussController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/DiscussReplyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/ProblemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/ReplyReplyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/UpdateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/DiscussReplyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/DiscussService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/InfoUpdateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/ProblemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/RegisterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/ReplyreplyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/DiscussReplyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/DiscussServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/InfoUpdateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/ProblemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/RegisterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/ReplyreplyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/utils/PhoneCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/utils/StaticPeram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/DiscussMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/DiscussReplyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProblemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ReplyReplyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TeacherMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/CollectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/CollectDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/DiscussDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/DiscussDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/DiscussreplyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/DiscussreplyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/ProblemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/ProblemDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/ReplyreplyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/ReplyreplyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/TeacherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/TeacherDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/UsersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Discuss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Discuss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Discussreply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Discussreply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dto/CollectDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dto/CollectDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Collect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Collect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/CollectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/CollectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/CollectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/CollectServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,11 +22,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/CollectDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+              <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/CollectService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/CollectServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="89" column="53" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#1013#1014#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/ProblemDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Collect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dto/CollectDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -107,10 +124,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/CourseDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/CourseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dto/CollectDto.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CollectMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/CollectService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/CollectServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Discuss.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Discussreply.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Replyreply.java" />
@@ -127,6 +141,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/DiscussreplyDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/DiscussDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/CollectDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/CollectService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Collect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dto/CollectDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/CollectServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -205,26 +223,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CodingFirst" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CodingFirst" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CodingFirst" type="b2602c69:ProjectViewProjectNode" />
@@ -252,7 +251,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566813117916" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566813995909" />
     <property name="last_opened_file_path" value="E:/下载文件/CodingFirst-kzj/CodingFirst-kzj" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -474,7 +473,7 @@
       <workItem from="1566717853289" duration="6379000" />
       <workItem from="1566740825244" duration="2843000" />
       <workItem from="1566779969469" duration="20261000" />
-      <workItem from="1566810853158" duration="2254000" />
+      <workItem from="1566810853158" duration="3128000" />
     </task>
     <task id="LOCAL-00001" summary="分支提交，Mall半完成">
       <created>1566436644936</created>
@@ -511,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566810979259</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="完成全部交易过程，全部课程内容">
+      <created>1566813174342</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566813174342</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -538,7 +544,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22515000" />
+    <option name="totallyTimeSpent" value="23389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -627,39 +633,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/CollectServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/CourseSreviceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1003">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/controller/CourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Discuss.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Discussreply.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -758,16 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/ProblemDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,7 +873,50 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/CollectDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/CollectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/model/Collect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dto/CollectDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/dao/ProblemDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fjut/oj/edu/service/impl/CollectServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="89" column="53" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

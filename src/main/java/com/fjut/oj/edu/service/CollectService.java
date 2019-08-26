@@ -37,7 +37,7 @@ public interface CollectService {
      * @param userId
      * @return
      */
-    List<CollectDto> findMyCollectDto(Integer userId);
+   CollectDto findMyCollectDto(Integer userId);
 
     /**
      * 查看某个收藏

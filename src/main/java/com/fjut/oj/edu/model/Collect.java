@@ -3,7 +3,7 @@ package com.fjut.oj.edu.model;
 public class Collect {
     private Integer collectId;//收藏ID
 
-    private String userId;//用户ID
+    private Integer userId;//用户ID
 
     private Integer problemId; //问题ID
 
@@ -19,11 +19,11 @@ public class Collect {
         this.collectId = collectId;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

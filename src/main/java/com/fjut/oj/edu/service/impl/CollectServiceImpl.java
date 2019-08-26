@@ -1,8 +1,14 @@
 package com.fjut.oj.edu.service.impl;
 
 import com.fjut.oj.edu.dao.CollectDao;
+import com.fjut.oj.edu.dao.CourseDao;
+import com.fjut.oj.edu.dao.DiscussDao;
+import com.fjut.oj.edu.dao.ProblemDao;
 import com.fjut.oj.edu.dto.CollectDto;
 import com.fjut.oj.edu.model.Collect;
+import com.fjut.oj.edu.model.Course;
+import com.fjut.oj.edu.model.Discuss;
+import com.fjut.oj.edu.model.Problem;
 import com.fjut.oj.edu.service.CollectService;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +19,15 @@ public class CollectServiceImpl implements CollectService {
 
     @Resource
     CollectDao collectDao;
+
+    @Resource
+    CourseDao courseDao;
+
+    @Resource
+    DiscussDao discussDao;
+
+    @Resource
+    ProblemDao problemDao;
 
 
     /**
@@ -57,10 +72,23 @@ public class CollectServiceImpl implements CollectService {
      * @return
      */
     @Override
-    public List<CollectDto> findMyCollectDto(Integer userId) {
+    public CollectDto findMyCollectDto(Integer userId) {
+        CollectDto collectDto=null;
+        collectDto.setUserId(userId);
+        List<Course> courseList = null;
+        List<Discuss> discussList= null;
+        List<Problem> problemList= null;
         List<Collect> collects=collectDao.findMyCollect(userId);
         for (int i=0;i<collects.size();i++){
-
+            if (collects.get(i).getCourseId()!=null){
+                courseList.add(courseDao.findCourseById(collects.get(i).getCourseId()));
+            }
+            if (collects.get(i).getDiscussId()!=null){
+                discussList.add(discussDao.queryDiscussById(collects.get(i).getDiscussId()));
+            }
+            if (collects.get(i).getProblemId()!=null){
+                problemList.add(problemDao.queryById(collects.get(i).getProblemId()));
+            }
         }
         return null;
     }
