@@ -9,8 +9,30 @@ public class Order {
     private Integer acb;//acv
     private Integer rmb;//
     private Date time;//账单时间
-    private Integer isCancel;//是否取消
+    private Integer isCancel;//订单状态（1：已付款，2：取消 ，0：待付款）
 
+
+    public Order(Integer orderId, Integer userId, Integer goodsId, Integer acb, Integer rmb, Date time, Integer isCancel) {
+        this.orderId = orderId;
+        this.userId = userId;
+        this.goodsId = goodsId;
+        this.acb = acb;
+        this.rmb = rmb;
+        this.time = time;
+        this.isCancel = isCancel;
+    }
+
+    public Order() {
+    }
+
+    public Order(Integer userId, Integer goodsId, Integer acb, Integer rmb, Date time, Integer isCancel) {
+        this.userId = userId;
+        this.goodsId = goodsId;
+        this.acb = acb;
+        this.rmb = rmb;
+        this.time = time;
+        this.isCancel = isCancel;
+    }
 
     public Integer getOrderId() {
         return orderId;

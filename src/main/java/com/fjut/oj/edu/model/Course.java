@@ -19,11 +19,42 @@ public class Course {
 
     private Integer teacherId;
 
-    private Double courseCharge;//课程价格
+    private Integer courseCharge;//课程价格
 
     private Integer courseNumAccount;//课程人数
 
     private Integer coursePush;//课程推送与否0为默认，-1为推送
+
+
+    public Course(String courseName, String courseIntroduction, String courseImg, Integer courseLength, Date courseStartTime, Date courseEndTime, Integer teacherId, Integer courseCharge, Integer courseNumAccount, Integer coursePush) {
+        this.courseName = courseName;
+        this.courseIntroduction = courseIntroduction;
+        this.courseImg = courseImg;
+        this.courseLength = courseLength;
+        this.courseStartTime = courseStartTime;
+        this.courseEndTime = courseEndTime;
+        this.teacherId = teacherId;
+        this.courseCharge = courseCharge;
+        this.courseNumAccount = courseNumAccount;
+        this.coursePush = coursePush;
+    }
+
+    public Course() {
+    }
+
+    public Course(Integer courseId, String courseName, String courseIntroduction, String courseImg, Integer courseLength, Date courseStartTime, Date courseEndTime, Integer teacherId, Integer courseCharge, Integer courseNumAccount, Integer coursePush) {
+        this.courseId = courseId;
+        this.courseName = courseName;
+        this.courseIntroduction = courseIntroduction;
+        this.courseImg = courseImg;
+        this.courseLength = courseLength;
+        this.courseStartTime = courseStartTime;
+        this.courseEndTime = courseEndTime;
+        this.teacherId = teacherId;
+        this.courseCharge = courseCharge;
+        this.courseNumAccount = courseNumAccount;
+        this.coursePush = coursePush;
+    }
 
     public Integer getCourseId() {
         return courseId;
@@ -89,11 +120,11 @@ public class Course {
         this.teacherId = teacherId;
     }
 
-    public Double getCourseCharge() {
+    public Integer getCourseCharge() {
         return courseCharge;
     }
 
-    public void setCourseCharge(Double courseCharge) {
+    public void setCourseCharge(Integer courseCharge) {
         this.courseCharge = courseCharge;
     }
 

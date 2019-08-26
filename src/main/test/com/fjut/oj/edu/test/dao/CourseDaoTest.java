@@ -24,6 +24,7 @@ public class CourseDaoTest extends BaseJunit4Test {
 
         }
 
+       System.out.println(courseDao.findAllAccountGood());
     }
 
 

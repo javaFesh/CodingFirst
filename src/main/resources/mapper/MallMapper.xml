@@ -49,7 +49,6 @@
     </select>
 
 
-
     <!--删除商品-->
     <delete id="deleteMallById">
         delete from t_mall where  where mallId = #{mallId};
@@ -57,9 +56,11 @@
 
 <!--查询分页总数
     Integer getMallCount();-->
-
     <select id="getMallCount" resultType="java.lang.Integer">
         select COUNT(*) from t_mall;
     </select>
+
+
+
 
 </mapper>

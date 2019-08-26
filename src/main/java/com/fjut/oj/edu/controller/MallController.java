@@ -34,7 +34,6 @@ public class MallController {
         return "mall";
     }
 
-
     //Ajax获取总页数
     @RequestMapping(value = "getPageCount")
     @ResponseBody
@@ -46,7 +45,7 @@ public class MallController {
 
 
     //用来传送分页信息
-    @RequestMapping(value = "index{pageNum}")
+    @RequestMapping(value = "index{pageNum}" )
     @ResponseBody
     public List<Mall> AllMallByPage(@PathVariable(value="pageNum")Integer pageNum){
         List<Mall> malls;
@@ -63,15 +62,69 @@ public class MallController {
     }
 
     //用来添加商品
-    @RequestMapping(value = "addMall")
-    public String add(@SessionAttribute User user,String mallTitle,String mallImg, Integer acb,Integer rmb,Date endTime,Integer buyLimit,Integer mallAccount){
-        Mall mall=new Mall(mallTitle,mallImg,acb,rmb,user.getUserId(),endTime,buyLimit,mallAccount);
-        if (mallService.addMall(mall)){
-            return "succsess";
+    @RequestMapping(value = "addMall", method = RequestMethod.POST)
+    @ResponseBody
+    public String add(HttpServletRequest request,@SessionAttribute User user,String mallTitle,String mallImg, Integer acb,Integer rmb,Date endTime,Integer buyLimit,Integer mallAccount,@RequestParam(value = "myfile", required = false) MultipartFile myfile){
+
+
+        String myFilePath = null;// 文件保存到数据库的路径
+        if (!myfile.isEmpty()) {// 图片有上传
+            // 读取uploads的真实路径
+            String path = request.getSession().getServletContext().getRealPath("statics" + File.separator + "uploads");
+            System.out.println("path:" + path);
+            // 读取原文件名
+            String oldFileName = myfile.getOriginalFilename();
+            System.out.println("原文件名:" + oldFileName);
+            // 读取文件扩展名
+            String extName = FilenameUtils.getExtension(oldFileName);
+            System.out.println("扩展名:" + extName);
+            long fileSize = 500*1024*1024;// 文件大小500M
+            // 读取文件大小
+            System.out.println("文件大小:" + myfile.getSize());
+
+            if (myfile.getSize() > fileSize) {// 文件超过限定
+                request.setAttribute("uploadFileError", "*上传文件超过5M!");
+                return "error";
+            } else if (extName.equalsIgnoreCase("jpg") || extName.equalsIgnoreCase("png")
+                    || extName.equalsIgnoreCase("jpeg") || extName.equalsIgnoreCase("pneg")) {// 扩展名是否合法
+                // 重命名文件
+                String fileName = System.currentTimeMillis() + "_user." + extName;
+                System.out.println("新文件名:" + fileName);
+                // 创建文件对象,接收从客户端已经传到服务器的文件流
+                File targetFile = new File(path, fileName);
+
+                try {
+                    myfile.transferTo(targetFile); // 保存文件
+                } catch (IllegalStateException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                //文件路径
+                myFilePath="statics" + File.separator + "uploads"+File.separator+fileName;
+                System.out.println("保存到数据库的文件路径:"+myFilePath);
+                Mall mall=new Mall(mallTitle,myFilePath,acb,rmb,user.getUserId(),endTime,buyLimit,mallAccount);
+                if (mallService.addMall(mall)){
+                    return "succsess";
+                }
+                else {
+                    return "faliure";
+                }
+            } else {
+                request.setAttribute("uploadFileError", "*上传文件格式不正确!");
+                return "error";
+            }
+
         }
-        else {
-            return "faliure";
-        }
+
+
+
+return "faliure";
+
+
+
+
 
     }
 

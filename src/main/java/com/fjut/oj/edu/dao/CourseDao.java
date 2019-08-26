@@ -13,6 +13,10 @@ public interface CourseDao {
     //添加课程信息
     Boolean insertCourse(Course course);
 
+    //查询所有有效购买时间课程总数
+    Integer findAllAccountGood();
+
+
     //查询所有有效购买时间课程信息
     List<Course> findAllCourse(RowBounds rowBounds);
     //按照ID查询课程信息
@@ -24,9 +28,21 @@ public interface CourseDao {
     //删除课程信息
     Boolean deleteCourse(Integer courserId);
 
-    //按照教师查询
 
+    //查询教师的课程总数
+
+    Integer findAllAccountTeacher(Integer teacherId);
+
+    //按照教师查询
     List<Course> findAllCourseByTer(RowBounds rowBounds,Integer teacherId);
 
+
+    //修改课程信息
+    Boolean updataCourse(Course course);
+
+
+
+    //查看推送课程
+    List<Course> findAllCourseByPush(RowBounds rowBounds);
 
 }
