@@ -14,5 +14,10 @@
     select count(*) from t_discuss where  t_discuss.type=0
   </select>
 
+  <select id="queryByUserId" parameterType="java.lang.Integer">
+    select * from t_discuss where userId=#{id}
+  </select>
+
+
 
 </mapper>

@@ -10,5 +10,7 @@ public interface ProblemService {
     Problem queryById(int id);
     int ProblemNum();
     void add(Problem problem);
+    List<Problem> queryByUser(int id,int currPage, int pageSize);
+    Problem UpdateProblem(Problem problem);
 
 }

@@ -3,10 +3,11 @@ package com.fjut.oj.edu.service.impl;
 import com.fjut.oj.edu.dao.ReplyreplyDao;
 import com.fjut.oj.edu.model.Replyreply;
 import com.fjut.oj.edu.service.ReplyreplyService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-
+@Service
 public class ReplyreplyServiceImpl implements ReplyreplyService {
     @Resource
     ReplyreplyDao replyreplyDao;
@@ -25,7 +26,8 @@ public class ReplyreplyServiceImpl implements ReplyreplyService {
     }
 
     @Override
-    public int  ReplyreplyNum(int discussid,int replyid) {
+    public int  ReplyreplyNum(int discussid,int replyid)
+    {
         return replyreplyDao.ReplyReplyNum(discussid,replyid);
     }
 }

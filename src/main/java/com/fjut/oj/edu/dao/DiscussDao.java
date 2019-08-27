@@ -18,4 +18,6 @@ public interface DiscussDao {
 
     int TotalRecord();
 
+    List<Discuss> queryByUserId(Integer id);
+
 }

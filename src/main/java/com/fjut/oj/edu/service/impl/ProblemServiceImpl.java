@@ -3,10 +3,11 @@ package com.fjut.oj.edu.service.impl;
 import com.fjut.oj.edu.dao.ProblemDao;
 import com.fjut.oj.edu.model.Problem;
 import com.fjut.oj.edu.service.ProblemService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-
+@Service
 public class ProblemServiceImpl implements ProblemService {
     @Resource
     ProblemDao problemDao;
@@ -19,7 +20,7 @@ public class ProblemServiceImpl implements ProblemService {
     }
 
     @Override
-    public List<Problem> queryByTagAndPage(int tag, int currPage, int pageSize) {
+    public List<Problem> queryByTagAndPage(String tag, int currPage, int pageSize) {
         int firstIndex = (currPage - 1) * pageSize;
         int lastIndex = currPage * pageSize;
         return problemDao.queryByTag(tag).subList(firstIndex,lastIndex);
@@ -38,5 +39,18 @@ public class ProblemServiceImpl implements ProblemService {
     @Override
     public void add(Problem problem) {
         problemDao.Add(problem);
+    }
+
+    @Override
+    public List<Problem> queryByUser(int id,int currPage, int pageSize) {
+        int firstIndex = (currPage - 1) * pageSize;
+        int lastIndex = currPage * pageSize;
+        return problemDao.queryByUserId(id).subList(firstIndex,lastIndex);
+    }
+
+    @Override
+    public Problem UpdateProblem(Problem problem) {
+       problemDao.UpdateProblem(problem);
+       return problemDao.queryById(problem.getProblemId());
     }
 }

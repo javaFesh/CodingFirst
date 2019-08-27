@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fjut.oj.edu.dao.DiscussDao" >
+
+
+  <select id="queryByAll" resultType="com.fjut.oj.edu.model.Discuss">
+    SELECT t_discuss.*,t_users.nick from t_discuss,t_users where t_discuss.userId=t_users.userId and t_discuss.type=0
+</select>
+  <select id="insert"  parameterType="com.fjut.oj.edu.model.Discuss">
+    insert into t_discuss values(NULL ,#{discussTitle},#{discussText},#{discussTime},#{userId},#{type})
+  </select>
+
+  <select id="TotalRecord" resultType="java.lang.Integer">
+    select count(*) from t_discuss where  t_discuss.type=0
+  </select>
+
+
+</mapper>

@@ -5,9 +5,10 @@ import com.fjut.oj.edu.dao.UsersDao;
 import com.fjut.oj.edu.model.Teacher;
 import com.fjut.oj.edu.model.User;
 import com.fjut.oj.edu.service.RegisterService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-
+@Service
 public class RegisterServiceImpl implements RegisterService {
     @Resource
     UsersDao usersDao;

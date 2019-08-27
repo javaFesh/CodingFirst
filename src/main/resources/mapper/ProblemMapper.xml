@@ -19,6 +19,13 @@
     insert into t_problem values(NULL ,#{problemType},#{problemTitle},#{problemAward},#{problemAuthor},NULL,NULL ,#{problemAns},#{problemAnalysis})
   </select>
 
+  <select id="queryByUserId" parameterType="java.lang.Integer">
+    select t_problem.* from t_problem,t_problemfinished where t_problem.t_problemId=t_problemfinished.t_problemId and t_problemfinished.userId=#{id}
+  </select>
+
+  <select id="UpdateProblem" parameterType="com.fjut.oj.edu.model.Problem">
+    update t_problem set problemType=#{problemType},problemTitle=#{problemTitle},problemAward=#{problemAward},problemAuthor=#{problemAuthor},problemAns=#{problemAns},problemAnalysis=#{problemAnalysis} where Problem.problemId=#{problemId}
+  </select>
 
 
 </mapper>

@@ -16,6 +16,6 @@ public interface ProblemDao {
     Problem queryById(int id);
     int ProblemNum();
     void Add(@Param("Problem") Problem problem);
-
-
+    List<Problem> queryByUserId(Integer id);
+    void UpdateProblem(@Param("Problem")Problem problem);//待完成
 }

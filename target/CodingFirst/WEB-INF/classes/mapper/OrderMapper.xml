@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fjut.oj.edu.dao.OrderDao">
+<!--   //添加订单
+    Boolean insertOrder(Order order);
+
+    //根据用户Id查询订单
+    List<Order> findAllOrderByIdByPage(RowBounds rowBounds,Integer userId);
+
+    //修改订单
+    Boolean updataOrder(Order order);
+
+
+    //删除订单（）
+    Boolean deleteOrder(Integer orderId);-->
+<insert id="insertOrder" parameterType="com.fjut.oj.edu.model.Order">
+    insert into t_order(userId,goodsId,acb,rmb,time,isCancel)values (#{userId},#{goodsId},#{acb},#{rmb},#{time},#{isCancel})
+</insert>
+
+    <select id="findAllOrderByIdByPage" resultType="com.fjut.oj.edu.model.Order">
+    select * from  t_order where userId=#{userId}
+    </select>
+    <!-- private Integer orderId;//账单ID递增
+    private Integer userId;//用户名
+    private Integer goodsId;//商品ID
+    private Integer acb;//acv
+    private Integer rmb;//
+    private Date time;//账单时间
+    private Integer isCancel;//是否取消-->
+    <update id="updataOrder" parameterType="com.fjut.oj.edu.model.Order">
+        update t_order set isCancel = #{isCancel},goodsId = #{goodsId},acb = #{acb},rmb = #{rmb}
+               where orderId = #{orderId} and time=#{time}
+    </update>
+
+<!--删除订单-->
+    <delete id="deleteOrder">
+        delete from t_order where orderId = #{orderId}
+    </delete>
+
+<!-- //根据ID查询订单
+    Order findOrderById();-->
+
+    <select id="findOrderById " resultType="com.fjut.oj.edu.model.Order">
+        select * from  t_order where orderId=#{orderId}
+    </select>
+
+
+    <!--AllOrderByIdAccount-->
+    <select id="AllOrderByIdAccount" resultType="java.lang.Integer">
+        select count(*) from  t_order where userId=#{userId}
+    </select>
+
+
+    <!--/**
+     * 用户已支付订单
+     * @param pageNum
+     * @param userId
+     * @return
+     */
+    List<Order> findAllOrderPayByPage(int pageNum, Integer userId);-->
+<select id="findAllOrderPayByPage" resultType="com.fjut.oj.edu.model.Order">
+select * from  t_order where userId=#{userId} and isCancel=1
+</select>
+    <!--//用户已支付订单总数-->
+    <!--Integer AllOrderPayAccount(Integer userId);-->
+    <select id="AllOrderPayAccount" resultType="java.lang.Integer">
+select count(*) from  t_order where userId=#{userId} and isCancel=1
+</select>
+<!---->
+
+    <select id="findAllOrderOnPayByPage" resultType="com.fjut.oj.edu.model.Order">
+select * from  t_order where userId=#{userId} and isCancel=0
+</select>
+
+    <select id="AllOrderOnPayAccount" resultType="java.lang.Integer">
+select count(*) from  t_order where userId=#{userId} and isCancel=0
+</select>
+<!---->
+    <select id="findAllOrderPayCourse" resultType="com.fjut.oj.edu.model.Order">
+select * from  t_order where userId=#{userId} and isCancel=2
+</select>
+
+
+
+    <!--
+
+
+    /**
+     * 查询用户未支付订单
+     * @param pageNum
+     * @param userId
+     * @return
+     */
+    List<Order> findAllOrderOnPayByPage(int pageNum, Integer userId);
+
+    /**
+     * 查询用户已支付底单的所有课程
+     * @param pageNum
+     * @param userId
+     * @return
+     */
+    List<Course> findAllOrderPayCourse(int pageNum, Integer userId);-->
+</mapper>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fjut.oj.edu.dao.ChapterDao">
+<!--private Integer chapterId;//课时ID
+
+    private Integer courseId;//对相应的课程ID
+
+    private String chapterName;//章节名称
+
+    private String chapterIntroductions;//章节描述
+
+    private String chapterResource;//章节资源-->
+
+    <!--//查询某课程所有章节
+    List<Chapter> findAllChapterByCourseId(Integer courseId);-->
+    <select id="findAllChapterByCourseId" resultType="com.fjut.oj.edu.model.Chapter">
+        select * from t_chapter where courseId=#{courseId}
+    </select>
+    <!--//查询某课程所有章节的页面总数
+    Integer findChapterAccountByCourseId(Integer courseId);-->
+
+    <select id="findChapterAccountByCourseId" resultType="java.lang.Integer">
+        select count(*) from t_chapter where courseId=#{courseId}
+    </select>
+    <!--
+    //添加课程章节信息
+    Boolean insertChapter(Chapter chapter);-->
+
+    <insert id="insertChapter" parameterType="com.fjut.oj.edu.model.Chapter">
+        insert into t_chapter (chapterId,courseId,chapterName,chapterIntroductions,chapterResource) values (#{chapterId},#{courseId},#{chapterName},#{chapterIntroductions},#{chapterResource]})
+
+    </insert>
+
+    <!--
+    //修改现有章节信息
+    Boolean updataChapter(Chapter chapter);-->
+    <update id="updataChapter" parameterType="com.fjut.oj.edu.model.Chapter">
+        update t_chapter set chapterName=#{chapterName},chapterIntroductions=#{chapterIntroductions},chapterResource=#{chapterResource}
+        where chapterId=#{chapterId} and courseId=#{courseId}
+    </update>
+
+
+
+    <!--
+//删除某一课程的全部章节信息
+Boolean deleteChaptersByCourseId(Integer courseId);-->
+    <delete id="deleteChaptersByCourseId" parameterType="java.lang.Integer">
+
+        delete from t_chapter where courseId=#{courseId}
+
+    </delete>
+    <!--
+    //删除单章节信息
+    Boolean deleteChapterByChapterId(Integer chapterId);-->
+
+    <delete id="deleteChapterByChapterId" parameterType="java.lang.Integer">
+        delete from t_chapter where chapterId=#{chapterId} and courseId=#{courseId}
+    </delete>
+    <!--查找单一章节-->
+    <select id="findChapterByChapterId" parameterType="java.lang.Integer">
+      select *from t_chapter where chapterId=#{chapterId} and courseId=#{courseId}
+    </select>
+
+
+</mapper>

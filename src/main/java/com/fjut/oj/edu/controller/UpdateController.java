@@ -1,8 +1,10 @@
 package com.fjut.oj.edu.controller;
 
+import com.fjut.oj.edu.model.Problem;
 import com.fjut.oj.edu.model.Teacher;
 import com.fjut.oj.edu.model.User;
 import com.fjut.oj.edu.service.InfoUpdateService;
+import com.fjut.oj.edu.service.ProblemService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +19,8 @@ import java.util.Map;
 public class UpdateController {
     @Resource
     private InfoUpdateService infoUpdateService;
+    @Resource
+    private ProblemService problemService;
 
 
     @RequestMapping(value = "/UserUpdate", method= RequestMethod.POST)
@@ -66,5 +70,28 @@ public class UpdateController {
         }
         return result;
     }
+
+    @RequestMapping(value = "/ProblemUpdate",method=RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> ProblemUpdate(String ProblemTitle,String ProblemAward,String ProblemAns,String ProblemAnalysis,String ProblemAuthor,String ProblemType,String ProblemId){
+        Problem problem=new Problem();
+        problem.setProblemTitle(ProblemTitle);
+        problem.setProblemAward(Integer.parseInt(ProblemAward));
+        problem.setProblemAns(ProblemAns);
+        problem.setProblemAnalysis(ProblemAnalysis);
+        problem.setProblemAuthor(ProblemAuthor);
+        problem.setProblemType(ProblemType);
+        problem.setProblemId(Integer.parseInt(ProblemId));
+        Map<String ,Object> result=new HashMap<>();
+        try{
+            Problem problem1=problemService.UpdateProblem(problem);
+            result.put("reslut0",problem1);
+        }catch (Exception e){
+            result.put("result1","修改失败");
+        }
+        return result;
+    }
+
+
 
 }
