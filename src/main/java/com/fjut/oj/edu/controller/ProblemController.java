@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -62,6 +63,19 @@ public class ProblemController {
             result.put("result","添加成功!");
         }catch (Exception e){
             result.put("result","添加失败!");
+        }
+        return result;
+    }
+
+    @RequestMapping(value = "/ProlemByUserId",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> ProblemByUserId(String id,String page){
+        Map<String,Object> result=new HashMap<>();
+        try{
+            List<Problem> problem=problemService.queryByUser(Integer.parseInt(id),5,Integer.parseInt(page));
+            result.put("result0",problem);
+        }catch (Exception e){
+            result.put("result1","添加失败!");
         }
         return result;
     }

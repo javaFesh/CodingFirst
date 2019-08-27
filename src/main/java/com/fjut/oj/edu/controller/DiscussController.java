@@ -56,4 +56,18 @@ public class DiscussController {
         return result;
     }
 
+    @RequestMapping(value = "/DiscussByUser",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String ,Object> DiscussByUser(String id,String pageSize){
+        Map<String,Object> result=new HashMap<>();
+        try{
+            List<Discuss> discusses=discussService.ShowByUserId(Integer.parseInt(id),5,Integer.parseInt(pageSize));
+            result.put("result0",discusses);
+        }catch (Exception e){
+            result.put("result1","0");
+        }
+        return result;
+
+    }
+
 }
