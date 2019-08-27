@@ -242,14 +242,23 @@ public class CourseController {
     }
 
 
-    //获取单章节信息
-
+    //获取单课程信息
     @RequestMapping(value = "findCourse{courseId}")
     public String findAll(Model model,@PathVariable(value="courseId")Integer courseId){
         Course course=courseSrevice.findCourse(courseId);
         model.addAttribute("Course",course);
         return "Course";
     }
+
+
+    //获取单个章节信息
+    @RequestMapping(value = "findChapter")
+    public String findChapter(Model model,Integer courseId,Integer chapterId){
+        Chapter chapter=courseSrevice.findChapterByChapterId(chapterId,courseId);
+        model.addAttribute("chapter",chapter);
+        return "Course";
+    }
+
 
 
 }
