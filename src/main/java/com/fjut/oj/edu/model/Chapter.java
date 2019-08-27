@@ -11,6 +11,16 @@ public class Chapter {
 
     private String chapterResource;//章节资源
 
+    public Chapter(Integer chapterId, Integer courseId, String chapterName, String chapterIntroductions, String chapterResource) {
+        this.chapterId = chapterId;
+        this.courseId = courseId;
+        this.chapterName = chapterName;
+        this.chapterIntroductions = chapterIntroductions;
+        this.chapterResource = chapterResource;
+    }
+
+    public Chapter() {
+    }
 
     public Integer getChapterId() {
         return chapterId;

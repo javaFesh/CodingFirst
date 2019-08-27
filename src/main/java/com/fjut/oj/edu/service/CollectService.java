@@ -18,10 +18,10 @@ public interface CollectService {
 
     /**
      * 删除收藏
-     * @param collectId
+     * @param discussId
      * @return
      */
-    Boolean deleteCollect(Integer collectId);
+    Boolean deleteCollect(Integer userId,Integer couresId,Integer discussId,Integer problemId);
 
 
     /**
@@ -40,14 +40,14 @@ public interface CollectService {
    CollectDto findMyCollectDto(Integer userId);
 
     /**
-     * 查看某个收藏
+     * 查看某个收藏（无用）
      * @param collectId
      * @return
      */
     Collect findMyCollectById(Integer collectId);
 
     /**
-     * 提取某个个人收藏真实内容
+     * 提取某个个人收藏真实内容（无用）
      * @param collectId
      * @return
      */

@@ -23,11 +23,10 @@
     <insert id="insertCollect" parameterType="com.fjut.oj.edu.model.Collect">
         INSERT into t_collect (userId,problemId,courseId,discussId) values (#{userId},#{problemId},#{courseId},#{discussId})
     </insert>
-
     <!--删除-->
     <delete id="deleteCollect" parameterType="java.lang.Integer">
-    delete from t_collect where collectId=#{collectId}
-</delete>
+      delete from t_collect where userId=#{userId} and couresId=#{couresId}and discussId=#{discussId}and problemId=#{problemId}
+    </delete>
 
     <!--查看-->
     <select id="findMyCollect" resultType="com.fjut.oj.edu.model.Collect">
